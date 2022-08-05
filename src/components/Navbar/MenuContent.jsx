@@ -8,10 +8,10 @@ import {
   MdSettings,
   MdOutlineExitToApp,
 } from "react-icons/md";
-import "../assets/styles/scss/MenuContent.scss";
+import "../../assets/styles/scss/MenuContent.scss";
 import ButtonComponent from "./ButtonComponent";
 import LogoComponent from "./LogoComponent";
-import menudata from "../assets/data/psdata.menubar.js"
+import menudata from "../../assets/data/psdata.menubar.js"
 const MenuContent = () => {
   return (
     <div className="MenuContent">
