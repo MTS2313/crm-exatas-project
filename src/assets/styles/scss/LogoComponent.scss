@@ -1,0 +1,23 @@
+.LogoArea{
+    display: flex;
+    margin: 0px 25px;
+    max-height: 150px;
+    height: 100%;
+    width: 80%;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    .LogoContent{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 20px;
+            height: 70px;
+            width: 70px;
+        }h2{
+            color:#ffffff;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: inter;
+            
+        }
+    }
+}

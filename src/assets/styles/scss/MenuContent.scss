@@ -1,0 +1,30 @@
+.MenuContent {
+  width: 320px;
+  background-color: rgba(43, 43, 43, 1);
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: 1px;
+  .UserNav {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    .OptionsContent {
+      padding-top: 30px;
+      width: 100%;
+      // height: 100%;
+    }
+  }
+}
+.MenuContent::-webkit-scrollbar {
+  width: 5px;
+}
+.MenuContent::-webkit-scrollbar-track {
+  background: rgba($color: #000000, $alpha: 0.1);
+}
+.MenuContent::-webkit-scrollbar-thumb {
+  background: rgba($color: #000000, $alpha: 0.2);
+}
+.MenuContent::-webkit-scrollbar-thumb:hover {
+  color: #fff;
+}

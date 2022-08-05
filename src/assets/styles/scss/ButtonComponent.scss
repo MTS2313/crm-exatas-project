@@ -1,0 +1,27 @@
+.ButtonComponent {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+    .DivContentNameL {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+}
+.ButtonComponent:hover {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
