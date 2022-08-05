@@ -22,6 +22,9 @@ function ButtonComponent(props) {
           </div>
           <MdOutlineExpandMore color="#ffffff" size={25} className="DropIcon" />
         </div>
+        {props.isDropList.map((i)=> {
+          return <h2>{i.name}</h2>
+        })}
       </button>
     );
   }

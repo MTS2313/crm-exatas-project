@@ -24,6 +24,7 @@ const MenuContent = () => {
             logo={<i.logocpn color="#ffffff" size={25} />}
             name={i.name}
             isDrop={i.isDrop}
+            isDropList={i.DropList}
           />
             })
           }
