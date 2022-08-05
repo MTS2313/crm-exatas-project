@@ -11,40 +11,28 @@ import {
 import "../assets/styles/scss/MenuContent.scss";
 import ButtonComponent from "./ButtonComponent";
 import LogoComponent from "./LogoComponent";
+import menudata from "../assets/data/psdata.menubar.js"
 const MenuContent = () => {
   return (
     <div className="MenuContent">
         <LogoComponent />
       <div className="UserNav">
         <div className="OptionsContent">
-          <ButtonComponent
-            logo={<MdDashboard color="#ffffff" size={25} />}
-            name={"Dashoboard"}
-            isDrop={false}
+          {
+            menudata.map((i)=>{
+              return <ButtonComponent
+            logo={<i.logocpn color="#ffffff" size={25} />}
+            name={i.name}
+            isDrop={i.isDrop}
           />
-          <ButtonComponent
-            name="Venda"
-            logo={<MdShoppingCart color="#ffffff" size={25} />}
-          />
-          <ButtonComponent
-            name="Financeiro"
-            logo={<MdOutlineAttachMoney color="#ffffff" size={25} />}
-          />
-          <ButtonComponent
-            name="Clientes"
-            logo={<MdPerson color="#ffffff" size={25} />}
-          />
-          <ButtonComponent
-            name="Estoque"
-            logo={<MdInventory color="#ffffff" size={25} />}
-          />
-          <ButtonComponent
-            name="configurações"
-            logo={<MdSettings color="#ffffff" size={25} />}
-          />
+            })
+          }
         </div>
       </div>
-      <ButtonComponent logo={<MdOutlineExitToApp color="red" size={25} />} />
+      <button className="ExitBtn">
+        <MdOutlineExitToApp color="#D57373" size={25}/>
+        <p>Sair</p>
+      </button>
     </div>
   );
 };
