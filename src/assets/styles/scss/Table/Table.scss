@@ -1,0 +1,53 @@
+ .tablelayout{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    thead{
+        background-color: transparent;
+        th{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: left;
+            color: rgba(30, 30, 30, 0.7);
+        }
+    }
+    tbody{
+        background: #F4F4F4;
+        border-collapse: collapse;
+        border-radius: 8px 8px 0px 0px;
+        -moz-border-radius: 8px 8px 0px 0px;
+        -webkit-border-radius: 8px 8px 0px 0px;
+        tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        td{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            color: rgba(43, 43, 43, 0.7);
+            &.bold{
+            color: #1E1E1E;
+            font-weight: 700;
+            }
+        }
+    }
+    td{
+        padding-left: 5px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    th{
+        padding-left: 5px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+ }
+
+.buttonPopup{
+
+}

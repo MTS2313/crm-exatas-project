@@ -9,11 +9,13 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
+import App from "./App";
 
   export default function(){
         return (
             <BrowserRouter>
                 <Routes>
+                  <Route path="/" element={<App />} />
                   <Route path="/signin" element={<Login />} />
                   <Route path="/signup" element={<CreateAccount />} />
                 </Routes>
