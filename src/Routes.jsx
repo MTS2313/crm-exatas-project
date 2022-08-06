@@ -9,6 +9,7 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
   export default function(){
         return (
@@ -16,6 +17,7 @@ import {
                 <Routes>
                   <Route path="/signin" element={<Login />} />
                   <Route path="/signup" element={<CreateAccount />} />
+                  <Route path="/" element={<Home />} />
                 </Routes>
             </BrowserRouter>
           );
