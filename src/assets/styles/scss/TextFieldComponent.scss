@@ -1,0 +1,39 @@
+.text-field {
+     width: 100%;
+     max-height: 60px;
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+     gap: 25px;
+     padding: 0 25px;
+     background-color: #F7F7F7;
+     border-radius: 8px;
+     outline: #CFCFCF 2px solid;
+
+     .text-field-input {
+          width: 100%;
+          background-color: transparent;
+          outline: none;
+          font-weight: 600;
+          box-sizing: border-box;
+          border: none;
+          height: 60px;
+          font-size: 17px;
+     }
+
+     .text-field-input:focus .text-field {
+          outline: #2A7FFA 2px solid;
+     }
+}
+
+@media screen and (max-width:650px) {
+     .text-field {
+          max-height: 55px;
+          gap: 10px;
+          padding: 0 10px;
+
+          .text-field-input{
+               font-size: 15px;
+          }
+     }
+}

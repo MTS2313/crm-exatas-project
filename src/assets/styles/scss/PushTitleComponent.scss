@@ -1,0 +1,15 @@
+.push-title{
+     display: flex;
+     align-items: center;
+     gap: 25px;
+     flex-wrap: wrap;
+     font-family: 'Inter';
+     color: #1E1E1E;
+
+     button{
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+     }
+}
