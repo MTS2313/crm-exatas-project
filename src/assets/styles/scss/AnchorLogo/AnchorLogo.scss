@@ -1,0 +1,22 @@
+.anchor-logo {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     text-transform: uppercase;
+     font-weight: bold;
+     flex-direction: row;
+     color: #2A7FFA;
+}
+
+.logo-icon-base {
+     width: fit-content;
+     height: fit-content;
+     display: flex;
+     align-items: center;
+     color: white;
+     border-radius: 50px;
+     justify-content: center;
+     width: 70px;
+     height: 70px;
+     background-color: #2A7FFA;
+}
