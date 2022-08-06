@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/TextFieldComponent.scss'
+import '../../assets/styles/scss/Auth/TextFieldComponent.scss'
 
 const TextField = ({ icon, placeholder }) => {
      return (

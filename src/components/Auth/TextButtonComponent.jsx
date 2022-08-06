@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/TextButtonComponent.scss'
+import '../../assets/styles/scss/Auth/TextButtonComponent.scss'
 import { Link } from 'react-router-dom'
 
 const TextButton = ({ text, href }) => {

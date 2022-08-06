@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../assets/styles/scss/LogoComponent.scss"
+import "../../assets/styles/scss/Navbar/LogoComponent.scss"
 import psLogo from "../assets/images/psLogo.png"
 
 function LogoComponent() {

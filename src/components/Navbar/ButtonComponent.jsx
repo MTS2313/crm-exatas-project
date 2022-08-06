@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../assets/styles/scss/ButtonComponent.scss";
+import "../../assets/styles/scss/Navbar/ButtonComponent.scss";
 import { MdOutlineExpandMore } from "react-icons/md";
 function ButtonComponent(props) {
   const [CompoentListDrop, setCompoentListDrop] = useState(null);

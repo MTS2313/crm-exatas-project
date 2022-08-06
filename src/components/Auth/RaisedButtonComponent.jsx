@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/RaisedButtonComponent.scss'
+import '../../assets/styles/scss/Auth/RaisedButtonComponent.scss'
 
 const RaisedButton= ({text}) => {
      return ( 
