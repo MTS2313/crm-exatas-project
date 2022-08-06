@@ -1,0 +1,12 @@
+.ratio {
+     display: flex;
+     align-items: center;
+     gap: 25px;
+     font-weight: bold;
+     color: #616161;
+
+     input {
+          width: 25px;
+          height: 25px;
+     }
+}

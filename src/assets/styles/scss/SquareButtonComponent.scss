@@ -1,0 +1,16 @@
+.square-button {
+     display: flex;
+     max-width: 70px;
+     max-height: 70px;
+     height: 70px;
+     width: 70px;
+     align-items: center;
+     justify-content: center;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     transition: all 0.7s ease; 
+     border-radius: 8px;
+     align-self: flex-end;
+     background-color: #2A7FFA;
+}

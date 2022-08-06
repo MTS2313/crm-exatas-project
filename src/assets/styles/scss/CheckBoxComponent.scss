@@ -1,0 +1,19 @@
+.check-box {
+     width: fit-content;
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     font-size: 17px;
+     font-weight: bold;
+     color: #6A6A6A;
+     cursor: pointer;
+     transform: translate(15px, 0);
+
+     input {
+          width: 25px;
+          border-radius: 8px;
+          height: 25px;
+          border: none;
+          cursor: pointer;
+     }
+}

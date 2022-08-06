@@ -1,0 +1,127 @@
+input {
+     font-family: 'inter';
+}
+
+.auth-page {
+     background-color: #E4E4E4;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100vh;
+     font-family: 'Inter';
+     box-sizing: border-box;
+}
+
+.auth-page-container {
+     width: 610px;
+     box-sizing: border-box;
+     background-color: white;
+     border-radius: 8px;
+}
+
+.auth-page-content {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 40px;
+     padding: 40px;
+}
+
+.auth-form-area {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 40px;
+}
+
+.auth-text-field-area {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+}
+
+.auth-title {
+     font-size: 40px;
+     color: #2B2B2B;
+}
+
+.auth-paragrath {
+     color: #6A6A6A;
+     font-size: 20px;
+
+}
+
+.auth-actions {
+     width: 100%;
+     display: flex;
+     align-items: center;
+}
+
+.active {
+     display: flex;
+     width: 100%;
+}
+
+.inactive {
+     display: none;
+}
+
+.progress-bar {
+     width: 100%;
+     height: 15px;
+     background-color: #EFEFEF;
+     border-radius: 8px 8px 0 0;
+     transition: all 0.7s ease;
+}
+
+.progress-bar-completed {
+     transition: all 0.7s ease;
+     width: 20%;
+     height: 100%;
+     background-color: #2A7FFA;
+     border-radius: 8px 0 0 0;
+}
+
+.ratio-selectio {
+     display: flex;
+     align-items: center;
+     gap: 40px;
+}
+
+@media screen and (max-width:650px) {
+     .auth-page-container {
+          width: 100%;
+          margin: 0 20px;
+     }
+
+     .progress-bar {
+          width: 100%;
+     }
+
+     .auth-page-content {
+          padding: 20px;
+     }
+     .auth-paragrath {
+          color: #6A6A6A;
+          font-size: 15px;
+     
+     }
+     body{
+          background-color: #E4E4E4;
+     }
+     .auth-page {
+          height: auto;
+          padding: 60px 10px;
+          
+     }
+}
+
+@media screen and (max-height:650px) {
+     .auth-page {
+          height: auto;
+          padding: 60px 10px;
+     }
+}
