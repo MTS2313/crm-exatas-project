@@ -1,31 +1,34 @@
 import React, { useState } from "react";
 import "../../assets/styles/scss/ButtonComponent.scss";
-import { MdOutlineExpandMore } from "react-icons/md";
-function ButtonComponent(props) {
+import { MdOutlineExpandMore, MdShoppingCart } from "react-icons/md";
+function ButtonComponent({
+  name,
+  logo,
+  isDrop
+}) {
   const [CompoentListDrop, setCompoentListDrop] = useState(null);
   
-  if (!props.isDrop) {
+  if (!isDrop) {
     return (
       <button className="ButtonComponent">
         <div className="DivContentNameL">
-          <span>{props.logo}</span>
-          <p>{props.name}</p>
+          <span>{logo}</span>
+          <p>{name}</p>
         </div>
       </button>
     );
   } else {
     return (
-      <button className="ButtonDrop">
+      <button className="ButtonDrop" onClick={()=>{
+        window.location.href="/Venda"
+      }}>
         <div className="ButtonDroplFocus">
           <div className="DivContentNameLDrop">
-            <span>{props.logo}</span>
-            <p>{props.name}</p>
+            <span><MdShoppingCart color="#ffffff" size={25}/></span>
+            <p>{name}</p>
           </div>
           <MdOutlineExpandMore color="#ffffff" size={25} className="DropIcon" />
         </div>
-        {props.isDropList.map((i)=> {
-          return <h2>{i.name}</h2>
-        })}
       </button>
     );
   }

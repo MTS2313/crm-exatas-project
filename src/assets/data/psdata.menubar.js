@@ -1,17 +1,21 @@
+import React from "react"
 const menudata = [
     {
         name:"Dashoboard",
         isDrop:false,
-        logocpn:"MdDashboard"
+        logocpn: {
+            color:"#ffffff",
+            size:"25"
+        }
     },
     {
         name:"Venda",
         isDrop:true,
-        logocpn:"MdShoppingCart",
+        // logocpn:<MdShoppingCart color="#ffffff" size={25}/>,
         DropList:[
             {
                 name:"Venda",
-                logocpn:"MdShoppingCart",
+                // logocpn:<MdShoppingCart color="#ffffff" size={25}/>,
             }
         ]
     }

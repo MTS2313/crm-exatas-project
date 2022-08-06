@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../assets/styles/scss/LogoComponent.scss"
-import psLogo from "../assets/images/psLogo.png"
+import psLogo from "../../assets/images/psLogo.png"
 
 function LogoComponent() {
   return (

@@ -11,23 +11,14 @@ import {
 import "../../assets/styles/scss/MenuContent.scss";
 import ButtonComponent from "./ButtonComponent";
 import LogoComponent from "./LogoComponent";
-import menudata from "../../assets/data/psdata.menubar.js"
 const MenuContent = () => {
   return (
     <div className="MenuContent">
         <LogoComponent />
       <div className="UserNav">
         <div className="OptionsContent">
-          {
-            menudata.map((i)=>{
-              return <ButtonComponent
-            logo={<i.logocpn color="#ffffff" size={25} />}
-            name={i.name}
-            isDrop={i.isDrop}
-            isDropList={i.DropList}
-          />
-            })
-          }
+          <ButtonComponent name={"Dashoboard"} logo={<MdDashboard color="#ffffff" size={25}/>}/>
+          <ButtonComponent name={"Venda"} logo={<MdShoppingCart color="#ffffff" size={25}/>} isDrop={true}/>
         </div>
       </div>
       <button className="ExitBtn">
