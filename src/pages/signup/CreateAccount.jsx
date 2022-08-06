@@ -1,10 +1,10 @@
-import TextField from "../../components/TextFieldComponent";
+import TextField from "../../components/Auth/TextFieldComponent";
 import '../../assets/styles/scss/AuthPageComponent.scss'
 import { MdEmail, MdOutlineCheck, MdOutlineArrowForwardIos, MdLock, MdOutlineArrowBackIos, MdOutlineApartment, MdPerson, MdFolderShared } from 'react-icons/md'
-import PushTitle from "../../components/PushTitleComponent";
-import SquareButton from "../../components/SquareButtonComponent";
+import PushTitle from "../../components/Auth/PushTitleComponent";
+import SquareButton from "../../components/Auth/SquareButtonComponent";
 import { useState } from "react";
-import Ratio from "../../components/RatioComponent";
+import Ratio from "../../components/Auth/RatioComponent";
 
 const iconSize = 35
 
@@ -35,7 +35,7 @@ const CreateAccount = () => {
                          />
                     </div>
                     <div className="auth-page-content">
-                         <PushTitle text={'Create Account'} />
+                         <PushTitle text={'Create Account'} href={'/signin'}/>
                          {createAccountList.map((item, index) => {
                               return <p key={index} className={index === current ? 'auth-paragrath active' : 'inactive'}>{item.desc}</p>
                          })}

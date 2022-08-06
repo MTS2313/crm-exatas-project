@@ -1,9 +1,9 @@
-import TextField from "../../components/TextFieldComponent";
+import TextField from "../../components/Auth/TextFieldComponent";
 import '../../assets/styles/scss/AuthPageComponent.scss'
 import { MdEmail, MdLock } from 'react-icons/md'
-import CheckBox from "../../components/CheckBoxComponent";
-import RaisedButton from "../../components/RaisedButtonComponent";
-import TextButton from "../../components/TextButtonComponent";
+import CheckBox from "../../components/Auth/CheckBoxComponent";
+import RaisedButton from "../../components/Auth/RaisedButtonComponent";
+import TextButton from "../../components/Auth/TextButtonComponent";
 
 const Login = () => {
      return (
@@ -23,7 +23,7 @@ const Login = () => {
                                    <CheckBox text={'Lembrar email'} />
                               </div>
                               <RaisedButton text={"Entrar"} />
-                              <TextButton text={'Criar conta'} />
+                              <TextButton text={'Criar conta'} href={'/signup'} />
                          </form>
                     </div>
                </section>

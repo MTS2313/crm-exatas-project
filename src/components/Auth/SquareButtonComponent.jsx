@@ -1,4 +1,4 @@
-import '../assets/styles/scss/SquareButtonComponent.scss'
+import '../../assets/styles/scss/SquareButtonComponent.scss'
 
 const SquareButton = ({ icon, onClick, style }) => {
      return (
