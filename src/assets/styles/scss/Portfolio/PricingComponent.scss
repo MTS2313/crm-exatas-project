@@ -1,0 +1,105 @@
+.pricing {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin-top: 100px;
+     width: 100%;
+     font-family: 'Inter';
+
+     .pricing-content {
+          gap: 100px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+
+          .pricing-content-text {
+               text-align: center;
+               display: flex;
+               align-items: center;
+               flex-direction: column;
+               gap: 40px;
+
+               @media screen and (max-width: 650px) {
+                    text-align: start;
+                    align-items: flex-start;
+               }
+
+               .title {
+                    color: #212832;
+               }
+
+               .paragraph {
+                    color: rgba($color: #212832, $alpha: 0.8);
+               }
+          }
+
+          .prices-cards-selection {
+               width: 100%;
+               display: flex;
+               gap: 20px;
+               justify-content: center;
+               margin-top: 65px;
+               flex-wrap: wrap;
+
+               @media screen and (max-width: 1200px){
+                    gap: 80px;
+               }
+
+               @media screen and (max-width: 800px){
+                    flex-direction: column;
+               }
+
+               .price-card {
+                    width: 370px;
+                    border-radius: 8px;
+                    outline: rgba($color: #212832, $alpha: 0.1) 1px solid;
+                    padding: -40px 40px 40px 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-sizing: border-box;
+                    @media screen and (max-width: 1000px){
+                         width: 100%;
+                    }
+
+                    .price-card-content {
+                         transform: translate(0, 0);
+                         display: flex;
+                         transform: translate(0, -65px);
+                         align-items: center;
+                         flex-direction: column;
+                         text-align: center;
+
+                         .price-card-logo {
+                              height: 125px;
+                              width: 125px;
+                              border-radius: 100%;
+                         }
+
+                         .hypper-text {
+                              margin-top: 20px;
+                         }
+
+                         .paragraph {
+                              margin-top: 40px;
+                         }
+
+                         .price-value-text {
+                              display: flex;
+                              align-items: center;
+                              flex-direction: column;
+                              margin-top: 100px;
+                              gap: 40px;
+
+                              .price-text {
+                                   font-size: 48px;
+                                   font-weight: 500;
+                                   color: rgba($color: #212832, $alpha: 0.8);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
