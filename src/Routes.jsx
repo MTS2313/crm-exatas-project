@@ -10,6 +10,7 @@ import {
     Route,
   } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import PageTests from "./tests.dev/page.test";
 
   export default function(){
         return (
@@ -18,6 +19,7 @@ import Home from "./pages/Home/Home";
                   <Route path="/signin" element={<Login />} />
                   <Route path="/signup" element={<CreateAccount />} />
                   <Route path="/" element={<Home />} />
+                  <Route path="/tests" element={<PageTests/>}/>
                 </Routes>
             </BrowserRouter>
           );
