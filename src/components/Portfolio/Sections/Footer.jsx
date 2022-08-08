@@ -50,8 +50,8 @@ const Footer = () => {
                               </div>
                          </div>
                          <div className='rights'>
-                              <p className='paragraph'>
-                                   © 2022 Anchor. All rights reserved.
+                              <p className='paragraph' style={{'display': 'flex', 'gap': '10px', 'alignItems': 'center'}}>
+                                   © 2022 <div style={{'display': 'flex', 'alignItems': 'center', 'gap': '5px',}}><img src='src/assets/images/exataslogo.png' width={'35px'} height={'35px'} />Exatas</div>. All rights reserved.
                               </p>
                          </div>
                     </div>

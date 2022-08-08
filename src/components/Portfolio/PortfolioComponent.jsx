@@ -21,7 +21,7 @@ const PortfolioComponents = () => {
                <Reports />
                <Pricing />
                <Footer />
-               <FloatingButton position={'fixed'} icon={<MdOutlineArrowUpward color='#fff' size={35}/>} />
+               <FloatingButton position={'fixed'} icon={<MdOutlineArrowUpward color='#fff' size={35} />} />
           </main>
      );
 }

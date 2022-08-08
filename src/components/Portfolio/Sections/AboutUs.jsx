@@ -27,10 +27,10 @@ const AboutUs = () => {
                          <div className='about-us-cards-selection'>
                               <div className='about-us-card'>
                                    <div className='about-us-image'>
-                                        <img className='portrait' src={'https://images.unsplash.com/photo-1659880342912-51f8e9682e1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80'} />
+                                        <img className='portrait' src={'https://pps.whatsapp.net/v/t61.24694-24/216438667_326642789370785_5346326481682587274_n.jpg?ccb=11-4&oh=01_AVyYh3Djkeo2xfiQfX8YJy9W5tfS_i6tb-y4uG_6Kqu3tQ&oe=62FEAE4D'} />
                                    </div>
                                    <div className='about-us-card-text'>
-                                        <h1 className='hypper-text'>Name Surname</h1>
+                                        <h1 className='hypper-text'>Mateus do HS</h1>
                                         <p className='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis accumsan ultrices.</p>
                                         <div className='about-us-dev-social'>
                                              <div className='about-us-social github'>
@@ -47,10 +47,10 @@ const AboutUs = () => {
                               </div>
                               <div className='about-us-card'>
                                    <div className='about-us-image'>
-                                        <img className='portrait' src={'https://images.unsplash.com/photo-1659880342912-51f8e9682e1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80'} />
+                                        <img className='portrait' src={'https://img.freepik.com/fotos-gratis/homem-de-negocios-com-os-bracos-cruzados-e-sorrindo_1139-677.jpg?w=2000'} />
                                    </div>
                                    <div className='about-us-card-text'>
-                                        <h1 className='hypper-text'>Name Surname</h1>
+                                        <h1 className='hypper-text'>Gustavo da boca de fumo</h1>
                                         <p className='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis accumsan ultrices.</p>
                                         <div className='about-us-dev-social'>
                                              <div className='about-us-social github'>

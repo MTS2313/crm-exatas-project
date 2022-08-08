@@ -15,6 +15,10 @@
      .header-container {
           padding: 0px 40px;
           width: 100%;
+
+          @media screen and (max-width: 650px) {
+               padding: 0px 20px;
+          }
      }
 
      .navigation {

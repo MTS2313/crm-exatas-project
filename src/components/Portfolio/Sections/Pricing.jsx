@@ -19,7 +19,7 @@ const Pricing = () => {
                               {
                                    CRMPriceData.map((item, index) => {
                                         return (
-                                             <div key={index} className='price-card'>
+                                             <div key={index} className='price-card' style={{ 'backgroundColor': item.recomended ? '#fff' : '', 'outline': item.recomended ? 'none' : '', 'boxShadow': item.recomended ? '0 20px 20px -15px rgba(0,0,0,0.1)' : '' }}>
                                                   <div className='price-card-content'>
                                                        <div className='price-card-logo' style={{ 'backgroundColor': item.color }} />
                                                        <h1 className='hypper-text'>
