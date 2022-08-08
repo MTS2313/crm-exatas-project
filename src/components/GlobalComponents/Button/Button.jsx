@@ -11,12 +11,15 @@ function Button({
   padding = checkPropTypes.number | checkPropTypes.name,
   sizeName = checkPropTypes.number | checkPropTypes.name,
   ButtonFuc,
+  fontSize=checkPropTypes.length,
+  heightButton=checkPropTypes.length,
 }) {
   const Button = styled.button`
     color: ${Color};
     padding: ${padding};
-    color: ${Color};
     background-color: ${bgColor};
+    font-size:${fontSize}px;
+    height:${heightButton}px
   `;
   return (
     <Button className="DefaultButtonComponent" onClick={ButtonFuc}>
