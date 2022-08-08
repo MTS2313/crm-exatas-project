@@ -1,28 +1,35 @@
+import { MdShoppingCart, MdAllInbox, MdAttachMoney, MdArticle, MdSettings } from 'react-icons/md'
+
 export const CRMServicesCardData = [
      {
-          title: 'Loren Ipsum',
-          desc: 'Lorem ipsum dolor sit amet.',
-          primaryColor: '#CACACA'
+          title: 'Sell your products',
+          desc: 'Control your stock and your finances with our sales system.',
+          primaryColor: '#CACACA',
+          icon: <MdShoppingCart size={35} color={'#666666'} />
      },
      {
-          title: 'Loren Ipsum',
-          desc: 'Lorem ipsum dolor sit amet.',
-          primaryColor: '#E3F7E5'
+          title: 'Inventory control',
+          desc: 'control your stock in a dynamic and practical way.',
+          primaryColor: '#E3F7E5',
+          icon: <MdAllInbox size={35} color={'#2D9F39'} />
      },
      {
-          title: 'Loren Ipsum',
-          desc: 'Lorem ipsum dolor sit amet.',
-          primaryColor: '#D2E3FC'
+          title: 'Financial',
+          desc: 'generate invoices, see posted accounts and much more.',
+          primaryColor: '#D2E3FC',
+          icon: <MdAttachMoney size={35} color={'#0D55BF'} />
      },
      {
-          title: 'Loren Ipsum',
-          desc: 'Lorem ipsum dolor sit amet.',
-          primaryColor: '#D2E3FC'
+          title: 'Reports',
+          desc: 'have on hand reports of everything you want.',
+          primaryColor: '#E1D7FD',
+          icon: <MdArticle size={35} color={'#3A0AC2'} />
      },
      {
-          title: 'Loren Ipsum',
-          desc: 'Lorem ipsum dolor sit amet.',
-          primaryColor: '#D2E3FC'
+          title: 'Settings',
+          desc: 'configure your system your way.',
+          primaryColor: '#F2D9CA',
+          icon: <MdSettings size={35} color={'#A45728'} />
      }
 ]
 

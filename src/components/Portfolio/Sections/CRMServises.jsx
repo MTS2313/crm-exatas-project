@@ -19,7 +19,9 @@ const CRMServices = () => {
                                    CRMServicesCardData.map((item, index) => {
                                         return (
                                              <div key={index} className='card'>
-                                                  <div className='card-avatar' style={{ 'backgroundColor': item.primaryColor }}></div>
+                                                  <div className='card-avatar' style={{ 'backgroundColor': item.primaryColor }}>
+                                                       {item.icon}
+                                                  </div>
                                                   <div className="card-text">
                                                        <p className='card-title'>{item.title}</p>
                                                        <p className="card-desc">{item.desc}</p>

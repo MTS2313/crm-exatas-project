@@ -40,7 +40,7 @@
 
      .cards-selection {
           display: flex;
-          align-items: center;
+          align-items:flex-start;
           justify-content: center;
           gap: 20px;
           flex-wrap: wrap;
@@ -63,6 +63,9 @@
                     width: 100px;
                     height: 100px;
                     border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                }
 
                .card-text {
