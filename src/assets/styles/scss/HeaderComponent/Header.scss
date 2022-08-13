@@ -1,0 +1,28 @@
+.Header {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  justify-content: space-around;
+  .NamePage {
+    display: flex;
+    align-self: center;
+    h1 {
+      user-select: none;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 29px;
+      color: rgba(30, 30, 30, 0.7);
+      span {
+        font-weight: 900;
+        color: rgba(30, 30, 30, 1);
+      }
+    }
+  }
+  .ContentPages{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
