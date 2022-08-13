@@ -81,13 +81,13 @@ export const CRMPriceData = [
           price: '$900,00',
           modules: [
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
           ],
      },
@@ -99,13 +99,13 @@ export const CRMPriceData = [
           price: '$1600,00',
           modules: [
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
           ],
      },
@@ -117,13 +117,13 @@ export const CRMPriceData = [
           price: '$2800,00',
           modules: [
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
                {
-                    moduleName: ''
+                    moduleName: 'Cabeçça'
                },
           ],
      }

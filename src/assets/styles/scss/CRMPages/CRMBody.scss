@@ -1,0 +1,79 @@
+.crmSection {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     font-family: 'Inter';
+     padding-top: 20px;
+     box-sizing: border-box;
+}
+
+.crmHeader {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 20px;
+     flex-wrap: wrap;
+
+     .crmPathName {
+          font-size: 2rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          color: #1E1E1E;
+
+          font {
+               font-weight: 400;
+               color: rgba($color: #1E1E1E, $alpha: 0.7);
+          }
+     }
+
+     .crmHeaderActions {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          @media screen and (max-width: 775px) {
+               width: 100%;
+               justify-content: space-between;
+          }
+
+          @media screen and (max-width: 350px) {
+               flex-wrap: wrap;
+          }
+
+          .text-field {
+               width: 360px;
+
+               @media screen and (max-width: 350px) {
+                    width: 100%;
+               }
+          }
+
+          .filled-button {
+               @media screen and (max-width: 350px) {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+
+.crmContainer {
+     max-width: 1800px;
+     width: 100%;
+     padding: 0;
+     box-sizing: border-box;
+
+     @media screen and (max-width: 1860px) {
+          padding: 0 60px;
+     }
+
+     @media only screen and (max-width: 1280px) {
+          padding: 0 40px;
+     }
+
+     @media only screen and (max-width: 650px) {
+          padding: 0 20px;
+     }
+}

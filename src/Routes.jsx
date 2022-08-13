@@ -10,6 +10,8 @@ import {
   Route,
 } from "react-router-dom";
 import Portfolio from "./pages/home/Portfolio";
+import DashboardScreen from "./components/CRM/CRMPages/Dashboard";
+import VendasScreen from "./components/CRM/CRMPages/Vendas";
 
 export default function () {
   return (
@@ -18,6 +20,7 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
+        <Route path="/teste" element={<VendasScreen />} />
       </Routes>
     </BrowserRouter>
   );

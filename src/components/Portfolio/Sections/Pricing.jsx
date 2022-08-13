@@ -19,7 +19,7 @@ const Pricing = () => {
                               {
                                    CRMPriceData.map((item, index) => {
                                         return (
-                                             <div key={index} className='price-card' style={{ 'backgroundColor': item.recomended ? '#fff' : '', 'outline': item.recomended ? 'none' : '', 'boxShadow': item.recomended ? '0 20px 20px -15px rgba(0,0,0,0.1)' : '' }}>
+                                             <div key={index} className='price-card' style={{ 'backgroundColor': item.recomended ? '#fff' : '', 'outline': item.recomended ? 'none' : '', 'boxShadow': item.recomended ? '0 10px 15px 0px rgba(0,0,0,0.1)' : '' }}>
                                                   <div className='price-card-content'>
                                                        <div className='price-card-logo' style={{ 'backgroundColor': item.color }} />
                                                        <h1 className='hypper-text'>
@@ -34,13 +34,20 @@ const Pricing = () => {
                                                             }}>
                                                                  {item.price}
                                                             </h1>
-                                                            <FilledButton backgroundColor={item.recomended ? '' : '#fff'} text={'Get it'} fontColor={item.recomended ? '#fff' : '#2A7FFA'} />
+                                                            <FilledButton backgroundColor={item.recomended ? '' : 'transparent'} text={'Get it'} fontColor={item.recomended ? '#fff' : '#2A7FFA'} />
+                                                            <div className='price-modules'>
+                                                                 <h1 className="hypper-text">Modulos.</h1>
+                                                                 {item.modules.map((item => {
+                                                                      return (
+                                                                           <li className='module-index'>{item.moduleName}</li>
+                                                                      )
+                                                                 }))}
+                                                            </div>
                                                        </div>
                                                   </div>
                                              </div>
                                         )
-                                   })
-                              }
+                                   })}
                          </div>
                     </div>
                </div>

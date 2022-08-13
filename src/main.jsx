@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './assets/styles/scss/CRMPages/CRMBody.scss'
 import Routes from './Routes'
 
 

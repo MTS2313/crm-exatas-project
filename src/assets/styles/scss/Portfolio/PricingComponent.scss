@@ -42,11 +42,11 @@
                margin-top: 65px;
                flex-wrap: wrap;
 
-               @media screen and (max-width: 1200px){
+               @media screen and (max-width: 1200px) {
                     gap: 80px;
                }
 
-               @media screen and (max-width: 800px){
+               @media screen and (max-width: 800px) {
                     flex-direction: column;
                }
 
@@ -59,7 +59,8 @@
                     flex-direction: column;
                     align-items: center;
                     box-sizing: border-box;
-                    @media screen and (max-width: 1000px){
+
+                    @media screen and (max-width: 1000px) {
                          width: 100%;
                     }
 
@@ -83,6 +84,7 @@
 
                          .paragraph {
                               margin-top: 40px;
+                              padding: 0 20px;
                          }
 
                          .price-value-text {
@@ -96,6 +98,21 @@
                                    font-size: 48px;
                                    font-weight: 500;
                                    color: rgba($color: #212832, $alpha: 0.8);
+                              }
+
+                              .price-modules {
+                                   display: flex;
+                                   flex-direction: column;
+                                   gap: 20px;
+                                   align-items: center;
+
+                                   li {
+                                        color: #2A7FFA;
+                                        font-size: 1.1rem;
+                                        font-weight: bold;
+                                        list-style: none;
+                                        text-decoration: underline;
+                                   }
                               }
                          }
                     }
