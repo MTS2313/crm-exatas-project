@@ -1,0 +1,67 @@
+.intro-body {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     background-image: url(../../../images/portfolio-ellipse.png);
+     background-size: cover;
+     background-position: 50% 100%;
+     background-repeat: no-repeat;
+     color: white;
+     font-family: 'Inter';
+     background-color: #FDFDFD;
+
+     .container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     .intro-content {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          align-items: center;
+          text-align: center;
+          width: 630px;
+
+          .customers-spam {
+               font-weight: bold;
+               font-size: 1.25rem;
+          }
+     }
+}
+
+@media screen and (max-width:800px) {
+     .intro-body {
+          height: 100vh;
+          background-image: none;
+          align-items: center;
+          justify-content: start;
+          background-color: #2A7FFA;
+
+          .intro-content {
+               text-align: start;
+               align-items: flex-start;
+          }
+     }
+
+}
+
+@media screen and (max-height: 800px) {
+     .intro-body {
+          align-items: flex-start;
+          height: auto;
+          padding: 150px 0 100px 0;
+     }
+}
+
+@media screen and (min-height: 1500px) {
+     .intro-body {
+          height: auto;
+          align-items: flex-start;
+          padding: 200px 0;
+     }
+}

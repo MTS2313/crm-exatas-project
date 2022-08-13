@@ -1,0 +1,101 @@
+.portfolio-body {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     box-sizing: border-box;
+     background-color: #FDFDFD;
+}
+
+::-webkit-scrollbar {
+     width: 5px;
+     height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+     background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background: #2A7FFA;
+     border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     background: rgba($color: #2A7FFA, $alpha: 0.7);
+}
+
+a {
+     text-decoration: none;
+}
+
+.container {
+     width: 100%;
+     max-width: 1150px;
+     box-sizing: border-box;
+}
+
+.title {
+     font-weight: 900;
+     font-size: 4rem;
+     font-family: 'Inter';
+
+     @media screen and (max-width: 840px) {
+          font-size: 3rem;
+     }
+}
+
+.paragraph {
+     font-size: 1.25rem;
+     line-height: 50px;
+     font-family: 'Inter';
+     font-weight: normal;
+     color: rgba($color: #212832, $alpha: 0.8);
+}
+
+.hypper-text {
+     font-size: 1.5rem;
+     font-weight: bold;
+     font-family: 'Inter';
+     color: #212832;
+}
+
+.logo-bg-header {
+     top: -40px;
+     position: absolute;
+     left: 0;
+     width: 500px;
+     height: 200px;
+     z-index: -50;
+     background-size: 100%;
+     background-repeat: no-repeat;
+     background-image: url(../../../images/portfolio-ellipse-header.png);
+}
+
+
+@media screen and (max-width:1190px) {
+     .container {
+          padding: 0 40px;
+     }
+}
+
+@media screen and (max-width:650px) {
+     .container {
+          padding: 0 20px;
+     }
+}
+
+@media screen and (max-width:650px) {
+     .logo-bg-header {
+          display: none;
+     }
+}
+
+@media screen and (max-width:200px) {
+     .container {
+          padding: 0 10px;
+     }
+}

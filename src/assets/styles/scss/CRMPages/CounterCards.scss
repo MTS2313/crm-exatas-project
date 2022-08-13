@@ -1,0 +1,33 @@
+.counterCards {
+     display: flex;
+     width: 100%;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 40px;
+
+     .counterCardsSelection {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .counterCard {
+               width: 100%;
+               height: 155px;
+               border-radius: 8px;
+               display: flex;
+               justify-content: space-between;
+               flex-direction: column;
+               padding: 25px 30px;
+
+               .counterCardTitle {
+                    font-weight: 600;
+                    font-size: 1rem;
+               }
+
+               .counterCardResult {
+                    font-weight: 900;
+                    font-size: 4rem;
+               }
+          }
+     }
+}

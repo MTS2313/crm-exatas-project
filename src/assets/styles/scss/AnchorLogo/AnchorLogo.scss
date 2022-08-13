@@ -6,6 +6,11 @@
      font-weight: bold;
      flex-direction: row;
      color: #2A7FFA;
+     font-family: 'Inter';
+}
+
+.anchor-name {
+     display: block;
 }
 
 .logo-icon-base {
@@ -19,4 +24,18 @@
      width: 70px;
      height: 70px;
      background-color: #2A7FFA;
+}
+
+@media screen and (max-width: 650px) {
+     .anchor-name {
+          display: none;
+     }
+
+     .logo-icon-base {
+          background-color: #fff !important;
+          
+          svg path{
+               fill: #2A7FFA;
+          }
+     }
 }
