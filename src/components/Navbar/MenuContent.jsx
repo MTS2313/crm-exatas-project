@@ -11,6 +11,7 @@ import {
   MdDescription,
 } from "react-icons/md";
 import "../../assets/styles/scss/Navbar/MenuContent.scss";
+import AnchorLogo from "../AnchorLogo/AnchorLogoComponent";
 import ButtonComponent from "./ButtonComponent";
 import DropButtonComponent from "./DropButtonComponent";
 import LogoComponent from "./LogoComponent";
@@ -18,7 +19,9 @@ import LogoComponent from "./LogoComponent";
 const MenuContent = () => {
   return (
     <div className="MenuContent">
-      <LogoComponent />
+      <div className="LogoContent">
+      <AnchorLogo/>
+      </div>
       <div className="UserNav">
         <div className="OptionsContent">
           <ButtonComponent

@@ -1,0 +1,30 @@
+.ButtonRenderDf {
+  display: flex;
+  align-items: center;
+  padding: 15px 6.6%;
+  gap: 30px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  .BtnRenderDName {
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.ButtonRenderDfCld {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.BtnActive{
+  background: #FFFFFF1A;
+}

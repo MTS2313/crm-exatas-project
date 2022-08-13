@@ -1,7 +1,14 @@
 .Overview {
   display: flex;
   justify-content: start;
+  user-select: none;
   .ContentOverview {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px;
     width: 272px;
     height: 155px;
     font-family: "Inter";
