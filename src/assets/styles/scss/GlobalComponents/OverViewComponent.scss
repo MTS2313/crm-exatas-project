@@ -1,0 +1,28 @@
+.Overview {
+  display: flex;
+  justify-content: start;
+  user-select: none;
+  .ContentOverview {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 272px;
+    height: 155px;
+    font-family: "Inter";
+    font-style: normal;
+    border-radius: 8px;
+    h1 {
+      font-size: 64px;
+      line-height: 77px;
+      font-weight: 700;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

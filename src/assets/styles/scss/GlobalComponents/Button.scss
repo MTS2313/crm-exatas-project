@@ -1,0 +1,14 @@
+.DefaultButtonComponent {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    user-select: none;
+  }
+}
