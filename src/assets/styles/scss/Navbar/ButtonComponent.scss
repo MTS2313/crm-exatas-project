@@ -34,18 +34,19 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 .ButtonDrop {
   width: 100%;
-  height: fit-content;
   display: flex;
-  justify-content: center;
-  padding: 0px 15px;
   box-sizing: border-box;
-  background-color: transparent;
+  overflow: hidden;
+  height: 70px;
   border: none;
+  background-color: transparent;
   flex-direction: column;
+  animation: 0.25s RexpandT forwards;
   .DropIcon {
-    animation: 1s rgiro forwards;
+    animation: 0.25s rgiro forwards;
   }
   .ButtonDroplFocus {
+    padding: 0px 15px;
     min-height: 70px;
     width: 100%;
     display: flex;
@@ -68,13 +69,67 @@
       }
     }
   }
+  &:focus {
+    animation: 0.2s expandT forwards;
+    // height: auto;
+
+    .DropIcon {
+      animation: 0.2s giro forwards;
+    }
+  }
 }
 
-.ButtonDrop:focus {
-  background-color: rgba($color: #000000, $alpha: 0.1);
-  animation: 1s expand forwards;
-  .DropIcon {
-    animation: 1s giro forwards;
+// ------------------------------------------------------------------------------------------------------------------------------------------------
+.DropButtonContent {
+  min-height: 70px;
+  max-height: 70px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  animation: 0.25s expand forwards;
+  background: rgba(64, 64, 64, 1);
+
+  .DropControlBtn {
+    margin-left: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+  }
+}
+
+// key frames area
+@keyframes expand {
+  from {
+    min-height: 0px;
+    max-height: 0px;
+  }
+  to {
+    min-height: 70px;
+    max-height: 70px;
+  }
+}
+
+.null {
+  animation: 0.25s uexpand forwards;
+  height: 70px;
+}
+@keyframes uexpand {
+  from {
+    min-height: 70px;
+    max-height: 70px;
+  }
+  to {
+    min-height: 0px;
+    max-height: 0px;
   }
 }
 @keyframes giro {
@@ -94,4 +149,44 @@
     transform: rotate(0deg);
   }
 }
-// ------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+@keyframes RexpandT {
+  from {
+    height: auto;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  50% {
+    height: 25%;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  70% {
+    // height: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  to {
+    height: 70px;
+    // background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+}
+@keyframes expandT {
+  from {
+    height: 70px;
+    background-color: transparent;
+  }
+  2% {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  50% {
+    height: 20%;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  70% {
+    // height: 60%;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  to {
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    height: auto;
+  }
+}

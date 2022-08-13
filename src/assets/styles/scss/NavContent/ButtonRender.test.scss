@@ -1,0 +1,40 @@
+.ButtonRenderControl {
+  display: flex;
+  border: none;
+  background: transparent;
+  padding: 15px 20px;
+  cursor: pointer;
+  justify-content: space-between;
+  box-sizing: border-box;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  h4 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+  }
+}
+.isSelected {
+  background: rgba(255, 255, 255, 0.1);
+}
+.ButtonBgControl {
+  background-color: transparent;
+}
+
+.DropClosed {
+  animation: 0.4 iconRotate forwards;
+}
+@keyframes iconRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180);
+  }
+}

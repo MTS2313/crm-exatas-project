@@ -1,0 +1,21 @@
+.RelatoriButton {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  height: 50px;
+  width: 145px;
+  outline: 2px solid rgba($color: #2a7ffa, $alpha: 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2a7ffa05;
+  gap: 10px;
+  user-select: none;
+  h3 {
+    color: #2a7ffa80;
+    font-size: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}

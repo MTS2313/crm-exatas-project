@@ -1,0 +1,173 @@
+.about-us {
+     margin-top: 100px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #212832;
+     color: #fff;
+     padding: 100px 0;
+
+     .about-us-content {
+          gap: 100px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .about-us-title {
+               align-items: center;
+               text-align: center;
+               display: flex;
+               flex-direction: column;
+               gap: 40px;
+               @media screen and (max-width: 650px) {
+                    text-align: start;
+                    align-items: flex-start;
+               }
+               .paragraph {
+                    color: rgba($color: #fff, $alpha: 0.8);
+               }
+          }
+
+          .about-us-text {
+               gap: 40px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-align: center;
+
+               @media screen and (max-width: 650px) {
+                    text-align: start;
+                    align-items: flex-start;
+               }
+
+               .paragraph {
+                    color: rgba($color: #fff, $alpha: 0.8);
+
+                    @media screen and (max-width: 650px) {
+                         text-align: start;
+                         align-items: flex-start;
+                    }
+               }
+          }
+
+          .about-us-cards-selection {
+               display: flex;
+               align-items: flex-start;
+               gap: 20px;
+               width: 100%;
+
+               @media screen and (max-width: 1000px) {
+                    flex-direction: column;
+                    gap: 40px;
+               }
+
+               .about-us-card {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                    .about-us-image {
+                         width: 100%;
+                         height: 100%;
+                         max-height: 390px;
+
+                         @media screen and (max-width: 1000px) {
+                              max-height: calc(100vw - 30vw);
+                         }
+
+                         .portrait {
+                              width: 100%;
+                              height: 100%;
+                              min-height: 390px;
+                              max-height: 390px;
+                              object-fit: cover;
+                              border-radius: 8px;
+
+                              @media screen and (max-width: 1000px) {
+                                   max-height: calc(100vw - 30vw);
+                                   min-height: 0;
+                              }
+                         }
+                    }
+
+                    .about-us-card-text {
+                         display: flex;
+                         flex-direction: column;
+                         gap: 20px;
+
+                         .hypper-text {
+                              color: #fff;
+                         }
+
+                         .paragraph {
+                              color: rgba($color: #fff, $alpha: 0.8);
+                         }
+
+                         .about-us-dev-social {
+                              display: flex;
+                              flex-direction: row;
+                              align-items: center;
+
+                              &:hover {
+                                   .about-us-social.github {
+                                        transform: translate(0, 0);
+                                   }
+
+                                   .about-us-social.linkedin {
+                                        transform: translate(15px, 0);
+                                   }
+
+                                   .about-us-social.instagram {
+                                        transform: translate(30px, 0);
+                                   }
+                              }
+
+                              .about-us-social {
+                                   width: 50px;
+                                   height: 50px;
+                                   border-radius: 50%;
+                                   transition: all 0.25s ease;
+                                   cursor: pointer;
+                                   display: flex;
+                                   align-items: center;
+                                   justify-content: center;
+                              }
+
+                              .about-us-social.github {
+                                   background-color: #1E1E1E;
+                                   cursor: pointer;
+
+                                   &:hover {
+                                        transform: scale(1.3);
+                                   }
+                              }
+
+                              .about-us-social.linkedin {
+                                   background-color: #2A7FFA;
+                                   transform: translate(-15px, 0);
+
+                                   &:hover {
+                                        transform: translate(15px, 0) scale(1.3);
+                                   }
+                              }
+
+                              .about-us-social.instagram {
+                                   background-color: #FF1167;
+                                   transform: translate(-30px, 0);
+
+                                   &:hover {
+                                        transform: translate(30px, 0) scale(1.3);
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
+
+
+     }
+
+
+}
