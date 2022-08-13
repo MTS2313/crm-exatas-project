@@ -7,7 +7,7 @@ import {BrowserRouter,
 } from "react-router-dom";
 import Portfolio from "./pages/home/Portfolio";
 import DashboardScreen from "./components/CRM/CRMPages/Dashboard";
-import VendasScreen from "./components/CRM/CRMPages/Vendas~;
+import VendasScreen from "./components/CRM/CRMPages/Vendas";
 import Home from "./pages/Home/Home";
 import CreateAccount from "./pages/signup/CreateAccount";
 import Login from "./pages/signin/Login";

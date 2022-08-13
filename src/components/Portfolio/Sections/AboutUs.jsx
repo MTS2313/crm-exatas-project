@@ -27,7 +27,7 @@ const AboutUs = () => {
                          <div className='about-us-cards-selection'>
                               <div className='about-us-card'>
                                    <div className='about-us-image'>
-                                        <img className='portrait' src={'https://pps.whatsapp.net/v/t61.24694-24/216438667_326642789370785_5346326481682587274_n.jpg?ccb=11-4&oh=01_AVyYh3Djkeo2xfiQfX8YJy9W5tfS_i6tb-y4uG_6Kqu3tQ&oe=62FEAE4D'} />
+                                        <img className='portrait' src={'https://avatars.githubusercontent.com/u/34493629?v=4'} />
                                    </div>
                                    <div className='about-us-card-text'>
                                         <h1 className='hypper-text'>Mateus do HS</h1>
