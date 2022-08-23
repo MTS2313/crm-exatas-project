@@ -3,6 +3,7 @@ import MenuContent from "../../components/Navbar/MenuContent";
 import NavContent from "../../components/SectionsNav/NavContent";
 import Vendas from "../Sections/Vendas";
 import "../../assets/styles/scss/Sections/Home.scss";
+import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
 
 function Home() {
   const [componentActual, setComponentActual] = useState("");
@@ -10,11 +11,22 @@ function Home() {
   function SelectRender() {
     switch (currentSection) {
       case 0:
+        return <DashboardScreen/>
         break;
       case 1:
+        return<h3>case 1</h3>
+        break;
+      case 2:
+        return <h3>case 2</h3>
+        break;
+      case 3:
+            setCurrentSection(4)
         break;
       case 4:
-        console.log("tamo no 4");
+        return <h3>case 4</h3>
+        break;
+      case 5:
+          return <h3>case 5</h3>        
         break;
       default:
         break;

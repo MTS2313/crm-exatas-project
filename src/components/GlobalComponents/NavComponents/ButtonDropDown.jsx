@@ -1,24 +1,9 @@
 import { checkPropTypes } from "prop-types";
 import React from "react";
-import "../../../assets/styles/scss/Navbar/ButtonRenderDf.scss";
+import "../../../assets/styles/scss/NavContent/ButtonDropComponent.scss";
 
-function ButtonDropDown({
-  BtnName = checkPropTypes.name,
-  BtnIcon = checkPropTypes.prototype,
-  BarState = checkPropTypes.prototype,
-  onClick
-}) {  
-  return (
-    <button
-      onClick={onClick}
-      className={`${
-        BarState ? "ButtonRenderDf" : "ButtonRenderDfCld"
-      }`}
-    >
-      {BtnIcon}
-      {BarState ? <h3 className="BtnRenderDName">{BtnName}</h3> : null}
-    </button>
-  );
+function ButtonDropDown({}) {
+  return <button></button>;
 }
 
 export default ButtonDropDown;

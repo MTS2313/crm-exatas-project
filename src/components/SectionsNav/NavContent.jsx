@@ -1,16 +1,21 @@
 import React, { useState } from "react";
-import { MdDashboard, MdExitToApp, MdPerson } from "react-icons/md";
+import {
+  MdDashboard,
+  MdExitToApp,
+  MdPerson,
+  MdAttachMoney,
+  MdTrendingDown,
+} from "react-icons/md";
 import "../../assets/styles/scss/NavContent/NavContent.scss";
 import ButtonDropDown from "../GlobalComponents/NavComponents/ButtonDropDown";
 import ButtonRender from "../GlobalComponents/NavComponents/ButtonRender";
 import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl.test";
 
-function NavContent({ currentSection, setCurrentSection, setComponentActual }) {
+function NavContent({ currentSection, setCurrentSection }) {
   const [NavState, setNavState] = useState(true);
   const [NavScale, setNavScale] = useState("largeNav");
   const [Btntr, setBtntr] = useState("buttonopen");
   const [DivBarControl, setDivBarControl] = useState("DivBarControlopen");
-
   function NavWidthControl(state) {
     state
       ? (setNavScale("smallNav"),
@@ -43,56 +48,33 @@ function NavContent({ currentSection, setCurrentSection, setComponentActual }) {
           } ContentButtonsRender`}
         >
           <ButtonRenderControl
-            isDrop={true}
-            name="DashBoard"
+            isDrop={false}
             isOpen={NavState}
+            onClick={() => {
+              NavState ? null : NavWidthControl(false);
+              setCurrentSection(0);
+            }}
+            name="DashBoard"
             icon={<MdDashboard color="#fff" size={"2rem"} />}
+            Selected={currentSection === 0}
             iconNoselected={
               <MdDashboard size={"2rem"} opacity={"50%"} color="#fff" />
             }
-            iconSelected={
-              <MdDashboard size={"2rem"} color="#fff"/>
-            }
-            onClick={() => setCurrentSection(4)}
-            Selected={(currentSection === 4)}
+            iconSelected={<MdDashboard size={"2rem"} color="#fff" />}
           />
-          <ButtonRender
-            onClick={() => {
-              setCurrentSection(0);
-            }}
-            BtnName="Dashboard"
-            BarState={NavState}
-            Selected={currentSection == 0}
-            BtnIcon={<MdDashboard color="#fff" size={"2rem"} />}
-          />
-          {/* ----------------- CLIENTES */}
-          <ButtonRender
-            BtnName="Financeru"
-            BarState={NavState}
-            onClick={() => {
-              setCurrentSection(1);
-            }}
-            Selected={currentSection == 1}
-            isDropDown={true}
-            BtnIcon={<MdPerson color="#fff" size={"2rem"} />}
-          />
+          <ButtonRenderControl 
+          isDrop={true}
+          isOpen={NavState}
+          icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
+          name="venda"
+          onClick={() => {
+            NavState ? null : NavWidthControl(false);
+            setCurrentSection(2);
+          }}
+          Selected={currentSection === 2}
 
-          {[1, 2, 3].includes(currentSection) && NavState && (
-            <>
-              <ButtonDropDown
-                setComponentActual={setComponentActual}
-                onClick={() => setCurrentSection(2)}
-                Selected={currentSection == 2}
-                BtnIcon={<MdPerson color="#fff" size={"2rem"} />}
-              />
-              <ButtonDropDown
-                setComponentActual={setComponentActual}
-                onClick={() => setCurrentSection(3)}
-                Selected={currentSection == 3}
-                BtnIcon={<MdPerson color="#fff" size={"2rem"} />}
-              />
-            </>
-          )}
+          />
+          
         </div>
         <div className="ExitContent">
           <MdExitToApp color="#D57373" size={25} />

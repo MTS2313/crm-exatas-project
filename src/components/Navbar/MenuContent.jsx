@@ -20,7 +20,7 @@ const MenuContent = () => {
   return (
     <div className="MenuContent">
       <div className="LogoContent">
-      <AnchorLogo/>
+        <AnchorLogo />
       </div>
       <div className="UserNav">
         <div className="OptionsContent">
@@ -32,12 +32,43 @@ const MenuContent = () => {
             logo={<MdShoppingCart color="#ffffff" size={25} />}
             name="Vendas"
             isDrop={true}
-            DropListAr={[<DropButtonComponent name={"Venda"} icon={<MdShoppingCart color="#ffffff" size={25}/>}/>,<DropButtonComponent name={"Relatorios"} icon={<MdOutlineDescription color="#ffffff" size={25}/>}/>]}
+            DropListAr={[
+              <DropButtonComponent
+                name={"Venda"}
+                icon={<MdShoppingCart color="#ffffff" size={25} />}
+              />,
+              <DropButtonComponent
+                name={"Relatorios"}
+                icon={<MdOutlineDescription color="#ffffff" size={25} />}
+              />,
+            ]}
           />
-          <ButtonComponent isDrop={true} name="Financeiro" logo={<MdOutlineAttachMoney color="#ffffff" size={25}/>} DropListAr={[<DropButtonComponent name={"Financeiro1"} icon={<MdOutlineAttachMoney color="#ffffff" size={25}/>}/>]}/>
-          <ButtonComponent name={"Clientes"} logo={<MdPerson color="#ffffff" size={25}/>} isDrop={false} />
-          <ButtonComponent name="Estoque" logo={<MdInventory color="#ffffff" size={25}/>} isDrop={false}/>
-          <ButtonComponent name="Configurações" logo={<MdSettings color="#ffffff" size={25}/>} isDrop={false}/>
+          <ButtonComponent
+            isDrop={true}
+            name="Financeiro"
+            logo={<MdOutlineAttachMoney color="#ffffff" size={25} />}
+            DropListAr={[
+              <DropButtonComponent
+                name={"Financeiro1"}
+                icon={<MdOutlineAttachMoney color="#ffffff" size={25} />}
+              />,
+            ]}
+          />
+          <ButtonComponent
+            name={"Clientes"}
+            logo={<MdPerson color="#ffffff" size={25} />}
+            isDrop={false}
+          />
+          <ButtonComponent
+            name="Estoque"
+            logo={<MdInventory color="#ffffff" size={25} />}
+            isDrop={false}
+          />
+          <ButtonComponent
+            name="Configurações"
+            logo={<MdSettings color="#ffffff" size={25} />}
+            isDrop={false}
+          />
         </div>
       </div>
       <button className="ExitBtn">
