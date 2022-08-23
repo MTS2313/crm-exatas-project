@@ -1,5 +1,5 @@
 import { MdOutlineWest } from "react-icons/md";
-import '../../assets/styles/scss/Auth/PushTitleComponent.scss'
+import './styles/PushTitleComponent.scss'
 
 const PushTitle = ({ navigateTo, text, fontSize, href }) => {
      return (

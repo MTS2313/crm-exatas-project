@@ -1,4 +1,4 @@
-import '../../../assets/styles/scss/Portfolio/AboutUSComponent.scss'
+import '../styles/AboutUSComponent.scss'
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai'
 import { FaLinkedin } from 'react-icons/fa'
 

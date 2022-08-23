@@ -1,6 +1,6 @@
 import React from 'react'
 import {MdDescription} from "react-icons/md"
-import "../../../assets/styles/scss/HeaderComponent/RelatoriButton.scss"
+import "./styles/RelatoriButton.scss"
 function RelatoriButton() {
   return (
 <div className="RelatoriButton">

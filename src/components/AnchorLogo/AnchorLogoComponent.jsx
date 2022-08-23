@@ -1,5 +1,4 @@
-import { useState } from "react";
-import '../../assets/styles/scss/AnchorLogo/AnchorLogo.scss'
+import './styles/AnchorLogoComponent.scss'
 
 const AnchorLogo = ({ anchorFill, iconBackground, textSize, textColor }) => {
 

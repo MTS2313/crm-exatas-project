@@ -1,4 +1,4 @@
-import '../../../assets/styles/scss/Portfolio/IntroComponents.scss'
+import '../styles/IntroComponents.scss'
 import FilledButton from '../FilledButtonComponent';
 
 const PortfolioIntro = () => {

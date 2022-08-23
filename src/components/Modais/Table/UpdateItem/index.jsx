@@ -1,4 +1,4 @@
-import '../../../../assets/styles/scss/Modais/Table/TableModal.scss'
+import '../styles/TableModal.scss'
 import {close as CloseIcon} from '../../../../assets/svg/table.jsx'
 import React from 'react';
 import Modal from 'react-modal';

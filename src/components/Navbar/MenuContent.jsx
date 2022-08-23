@@ -10,7 +10,7 @@ import {
   MdOutlineDescription,
   MdDescription,
 } from "react-icons/md";
-import "../../assets/styles/scss/Navbar/MenuContent.scss";
+import "./styles/MenuContent.scss";
 import AnchorLogo from "../AnchorLogo/AnchorLogoComponent";
 import ButtonComponent from "./ButtonComponent";
 import DropButtonComponent from "./DropButtonComponent";

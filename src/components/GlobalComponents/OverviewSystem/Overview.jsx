@@ -1,5 +1,5 @@
 import { checkPropTypes } from "prop-types";
-import "../../../assets/styles/scss/GlobalComponents/OverViewComponent.scss";
+import "./styles/OverViewComponent.scss";
 import React from "react";
 import styled  from "styled-components";
 function Overview({

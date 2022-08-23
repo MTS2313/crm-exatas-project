@@ -5,7 +5,7 @@ import {BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import Portfolio from "./pages/home/Portfolio";
+import Portfolio from "./pages/Portfolio/Portfolio";
 import DashboardScreen from "./components/CRM/CRMPages/Dashboard";
 import VendasScreen from "./components/CRM/CRMPages/Vendas";
 import Home from "./pages/Home/Home";

@@ -1,5 +1,6 @@
 
-import '../../../assets/styles/scss/CRMPages/CounterCards.scss'
+import './styles/CounterCards.scss'
+import '../styles/CRMBody.scss'
 
 const CounterCards = ({ data }) => {
      return (

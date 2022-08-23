@@ -1,4 +1,4 @@
-import '../../../assets/styles/scss/Portfolio/FooterComponents.scss'
+import '../styles/FooterComponents.scss'
 import { MdOutlineArrowRightAlt } from 'react-icons/md'
 import AnchorLogo from '../../AnchorLogo/AnchorLogoComponent';
 

@@ -1,4 +1,5 @@
-import '../../../assets/styles/scss/CRMPages/Dashboard.scss'
+import './styles/Dashboard.scss'
+import '../styles/CRMBody.scss'
 import FilledButton from '../../Portfolio/FilledButtonComponent';
 import { MdOutlineFeed, MdOutlineSearch } from 'react-icons/md'
 import TextField from '../../Auth/TextFieldComponent';

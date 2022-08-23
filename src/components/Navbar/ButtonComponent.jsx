@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../assets/styles/scss/Navbar/ButtonComponent.scss";
+import "./styles/ButtonComponent.scss";
 import { MdOutlineExpandMore, MdShoppingCart } from "react-icons/md";
 function ButtonComponent({ name=String, logo=Object, isDrop, DropListAr = [] }) {
   const [CompoentListDrop, setCompoentListDrop] = useState(null);

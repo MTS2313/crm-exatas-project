@@ -6,9 +6,7 @@ import {
   MdAttachMoney,
   MdTrendingDown,
 } from "react-icons/md";
-import "../../assets/styles/scss/NavContent/NavContent.scss";
-import ButtonDropDown from "../GlobalComponents/NavComponents/ButtonDropDown";
-import ButtonRender from "../GlobalComponents/NavComponents/ButtonRender";
+import "./styles/NavContent.scss";
 import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl.test";
 
 function NavContent({ currentSection, setCurrentSection }) {

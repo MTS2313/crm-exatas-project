@@ -1,7 +1,7 @@
 import { MdOutlineFeed, MdOutlineSearch } from "react-icons/md";
 import TextField from "../../Auth/TextFieldComponent";
 import FilledButton from "../../Portfolio/FilledButtonComponent";
-import '../../../assets/styles/scss/CRMPages/Vendas.scss'
+import './styles/Vendas.scss'
 
 const VendasScreen = () => {
      return (

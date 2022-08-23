@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/Auth/RatioComponent.scss'
+import './styles/RatioComponent.scss'
 
 const Ratio = ({ text, name }) => {
      return (

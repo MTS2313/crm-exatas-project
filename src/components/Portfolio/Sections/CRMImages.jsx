@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdOutlineEast, MdOutlineWest } from 'react-icons/md';
 import { CRMImagesData } from '../../../assets/data/psdata.portfolioData';
-import '../../../assets/styles/scss/Portfolio/CRMImagesComponents.scss'
+import '../styles/CRMImagesComponents.scss'
 
 
 const CRMImages = () => {

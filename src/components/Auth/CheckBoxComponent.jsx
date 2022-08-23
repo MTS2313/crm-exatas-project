@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/Auth/CheckBoxComponent.scss'
+import './styles/CheckBoxComponent.scss'
 
 const CheckBox = ({ text }) => {
      return (

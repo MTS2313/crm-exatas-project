@@ -1,5 +1,5 @@
 import { CRMReportsData } from '../../../assets/data/psdata.portfolioData';
-import '../../../assets/styles/scss/Portfolio/ReportsComponents.scss'
+import '../styles/ReportsComponents.scss'
 
 
 const Reports = () => {

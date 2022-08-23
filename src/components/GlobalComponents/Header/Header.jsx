@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../assets/styles/scss/HeaderComponent/Header.scss";
+import "./styles/Header.scss";
 import Button from "../Button/Button";
 import RelatoriButton from "../RelatoriButton/RelatoriButton";
 import SearchBar from "../SearchBar/SearchBar";

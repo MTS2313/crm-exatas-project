@@ -1,7 +1,7 @@
 import { checkPropTypes } from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import "../../../assets/styles/scss/GlobalComponents/Button.scss";
+import "./styles/Button.scss";
 
 function Button({
   ButtonName = checkPropTypes.name,

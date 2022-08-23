@@ -1,5 +1,5 @@
 import AnchorLogo from "../AnchorLogo/AnchorLogoComponent";
-import '../../assets/styles/scss/Portfolio/PortifolioNavBarComponent.scss'
+import './styles/PortifolioNavBarComponent.scss'
 import FilledButton from "./FilledButtonComponent";
 import { MdMenu, MdClose } from 'react-icons/md'
 import { Link } from 'react-router-dom'

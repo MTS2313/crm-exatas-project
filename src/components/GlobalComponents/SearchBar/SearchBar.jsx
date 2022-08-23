@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
-import "../../../assets/styles/scss/HeaderComponent/SearchBar.scss";
+import "./styles/SearchBar.scss";
 import { checkPropTypes } from "prop-types";
 function SearchBar({
   color = checkPropTypes.name,

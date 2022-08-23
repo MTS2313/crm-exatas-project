@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/Table/Table.scss'
+import './styles/Table.scss'
 import ModalConfirmDelete from '../Modais/Table/ConfirmDelete'
 import ButtonPopup from './ButtonPopup'
 import { useEffect, useState } from 'react'

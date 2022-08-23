@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/Portfolio/FilledButtonComponent.scss'
+import './styles/FilledButtonComponent.scss'
 
 const FilledButton = ({ backgroundColor, fontColor, text, className, icon }) => {
      return (

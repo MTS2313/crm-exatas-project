@@ -1,5 +1,5 @@
 import { CRMPriceData } from '../../../assets/data/psdata.portfolioData';
-import '../../../assets/styles/scss/Portfolio/PricingComponent.scss'
+import '../styles/PricingComponent.scss'
 import FilledButton from '../FilledButtonComponent';
 
 const Pricing = () => {

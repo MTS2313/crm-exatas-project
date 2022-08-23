@@ -1,5 +1,5 @@
 import TextField from "../../components/Auth/TextFieldComponent";
-import '../../assets/styles/scss/Auth/AuthPageComponent.scss'
+import './styles/AuthPageComponent.scss'
 import { MdEmail, MdLock } from 'react-icons/md'
 import CheckBox from "../../components/Auth/CheckBoxComponent";
 import RaisedButton from "../../components/Auth/RaisedButtonComponent";

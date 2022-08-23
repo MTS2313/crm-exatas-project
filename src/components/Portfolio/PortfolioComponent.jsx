@@ -1,4 +1,4 @@
-import '../../assets/styles/scss/Portfolio/GlobalComponents.scss'
+import './styles/GlobalComponents.scss'
 import { MdOutlineArrowUpward } from 'react-icons/md'
 import PortfolioIntro from "../../components/Portfolio/Sections/IntroComponent";
 import FloatingButton from './FloatingButtonComponent';

@@ -1,5 +1,5 @@
 import TextField from "../../components/Auth/TextFieldComponent";
-import '../../assets/styles/scss/Auth/AuthPageComponent.scss'
+import './styles/AuthPageComponent.scss'
 import { MdEmail, MdOutlineCheck, MdOutlineArrowForwardIos, MdLock, MdOutlineArrowBackIos, MdOutlineApartment, MdPerson, MdFolderShared } from 'react-icons/md'
 import PushTitle from "../../components/Auth/PushTitleComponent";
 import SquareButton from "../../components/Auth/SquareButtonComponent";

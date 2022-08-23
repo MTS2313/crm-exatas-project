@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
 import { MdExpandMore } from "react-icons/md";
-import "../../../assets/styles/scss/NavContent/ButtonRender.test.scss";
+import "./styles/ButtonRender.test.scss";
 function ButtonRenderControl({
   name,
   icon,
