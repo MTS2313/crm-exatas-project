@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuContent from "../../components/Navbar/MenuContent";
 import NavContent from "../../components/SectionsNav/NavContent";
 import Vendas from "../Sections/Vendas";
-import "../../assets/styles/scss/Sections/Home.scss";
+import "./styles/Home.scss";
 import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
 
 function Home() {
