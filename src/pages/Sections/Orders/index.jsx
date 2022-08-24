@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/GlobalComponents/Header/Header'
+import Header from '../../../components/GlobalComponents/Header/Header'
 
 function Vendas() {
   return (
