@@ -19,6 +19,35 @@
     line-height: 24px;
     color: #fff;
   }
+  &.isSelected {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &.isExpanded{
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &.ButtonBgControl {
+    background-color: transparent;
+  }
+
+  &.SubButton {
+    width: 100%;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+
+    h4 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    &.isSelected{
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
 }
 .ButtonRenderControlDrop {
   display: flex;
@@ -39,15 +68,10 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #fff;
+    color: #ffffff;
   }
 }
-.isSelected {
-  background: rgba(255, 255, 255, 0.1);
-}
-.ButtonBgControl {
-  background-color: transparent;
-}
+
 .DropOpen {
   transition: all 0.4s ease;
   transform: rotate(180deg);

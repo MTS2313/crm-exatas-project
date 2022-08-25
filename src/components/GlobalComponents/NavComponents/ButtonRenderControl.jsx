@@ -10,20 +10,15 @@ function ButtonRenderControl({
   isDrop,
   isOpen,
   Selected,
+  isButtonExpanded,
   onClick,
-  dropdata = [],
-  onClickDrop,
-  SelectedDrop,
+  children
 }) {
-  const [dropState, setdropState] = useState(false);
-
   return isDrop ? (
-    // quando ser drop
+    // when button is Drop
     <>
       <button
-        className={`ButtonRenderControl ${Selected ? "isSelected" : ""} ${
-          isOpen ? "" : "ButtonBgControl"
-        }`}
+        className={`ButtonRenderControl ${!isOpen && "ButtonBgControl"} ${isButtonExpanded && "isExpanded"}`}
         onClick={onClick}
       >
         <span className="InfoBtnContent">
@@ -34,19 +29,19 @@ function ButtonRenderControl({
           <MdExpandMore
             color="#fff"
             size={"2rem"}
-            className={Selected ? "DropOpen" : "DropClosed"}
+            className={isButtonExpanded ? "DropOpen" : "DropClosed"}
           />
         ) : null}
       </button>
 
-      {Selected ? (
+      {isButtonExpanded && isOpen && (
         <div className="DropContent">
-          
+          {children}
         </div>
-      ) : null}
+      )}
     </>
   ) : (
-    // quando nao ser drop
+    // When button is not Drop
     <>
       <button
         className={`ButtonRenderControl ${Selected ? "isSelected" : ""} ${
@@ -54,10 +49,12 @@ function ButtonRenderControl({
         }`}
         onClick={onClick}
       >
+
         <span className="InfoBtnContent">
           {isOpen ? icon : Selected ? icon : iconNoselected}
-          {isOpen ? <h4 className="ButtonRenderName">{name}</h4> : null}
+          {isOpen && <h4 className="ButtonRenderName">{name}</h4>}
         </span>
+
       </button>
     </>
   );

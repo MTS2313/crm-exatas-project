@@ -2,26 +2,32 @@ import React, { useState } from "react";
 import {
   MdDashboard,
   MdExitToApp,
-  MdPerson,
+  MdMoney,
   MdAttachMoney,
   MdTrendingDown,
+  MdAccountBalanceWallet,
+  MdTableChart
 } from "react-icons/md";
 import "./styles/NavContent.scss";
-import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl.test";
+import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl";
+import SubButtonRenderControl from "../GlobalComponents/NavComponents/SubButtonRenderControl";
 
 function NavContent({ currentSection, setCurrentSection }) {
   const [NavState, setNavState] = useState(true);
   const [NavScale, setNavScale] = useState("largeNav");
   const [Btntr, setBtntr] = useState("buttonopen");
+  const [buttonExpanded, setButtonExpanded] = useState(null);
   const [DivBarControl, setDivBarControl] = useState("DivBarControlopen");
   function NavWidthControl(state) {
-    state
-      ? (setNavScale("smallNav"),
-        setBtntr("buttonclosed"),
-        setDivBarControl("DivBarControlClosed"))
-      : (setNavScale("largeNav"),
-        setBtntr("buttonopen"),
-        setDivBarControl("DivBarControlopen"));
+    if(state){
+      setNavScale("smallNav")
+      setBtntr("buttonclosed")
+      setDivBarControl("DivBarControlClosed")
+    }else{
+      setNavScale("largeNav")
+      setBtntr("buttonopen")
+      setDivBarControl("DivBarControlopen")
+    }
     setNavState(!NavState);
   }
 
@@ -49,29 +55,72 @@ function NavContent({ currentSection, setCurrentSection }) {
             isDrop={false}
             isOpen={NavState}
             onClick={() => {
-              NavState ? null : NavWidthControl(false);
+              if(!NavState) NavWidthControl(false);
+              setButtonExpanded(null)
               setCurrentSection(0);
             }}
             name="DashBoard"
-            icon={<MdDashboard color="#fff" size={"2rem"} />}
             Selected={currentSection === 0}
-            iconNoselected={
-              <MdDashboard size={"2rem"} opacity={"50%"} color="#fff" />
-            }
+            icon={<MdDashboard color="#fff" size={"2rem"} />}
+            iconNoselected={<MdDashboard size={"2rem"} opacity={"50%"} color="#fff" />}
             iconSelected={<MdDashboard size={"2rem"} color="#fff" />}
           />
+{/* ---------------------------- VENDA ---------------------------- */}
           <ButtonRenderControl 
           isDrop={true}
           isOpen={NavState}
-          icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
-          name="venda"
+          isButtonExpanded={buttonExpanded == 'venda'}
           onClick={() => {
-            NavState ? null : NavWidthControl(false);
-            setCurrentSection(2);
-          }}
-          Selected={currentSection === 2}
+            if(!NavState) NavWidthControl(false);
 
-          />
+            setButtonExpanded((el) => el == 'venda' ? null : 'venda')
+          }}
+          name="venda"
+          Selected={[2,3].includes(currentSection)}
+          icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
+          iconNoselected={<MdAttachMoney size={"2rem"} opacity={"50%"} color="#fff" />}
+          >
+            <SubButtonRenderControl 
+              name="Relatorio" 
+              icon={<MdAccountBalanceWallet color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => setCurrentSection(2)}
+              Selected={currentSection == 2}
+            />
+            <SubButtonRenderControl 
+              name="Tabela" 
+              icon={<MdTableChart color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => setCurrentSection(3)}
+              Selected={currentSection == 3}
+            />
+          </ButtonRenderControl>
+{/* ---------------------------- VENDA ---------------------------- */}
+      <ButtonRenderControl 
+          isDrop={true}
+          isOpen={NavState}
+          isButtonExpanded={buttonExpanded == 'financeiro'}
+          onClick={() => {
+            if(!NavState) NavWidthControl(false);
+
+            setButtonExpanded((el) => el == 'financeiro' ? null : 'financeiro')
+          }}
+          name="Financeiro"
+          Selected={[4,5].includes(currentSection)}
+          icon={<MdMoney color="#fff" size={"2rem"}/>} 
+          iconNoselected={<MdMoney size={"2rem"} opacity={"50%"} color="#fff" />}
+          >
+            <SubButtonRenderControl 
+              name="Relatorio" 
+              icon={<MdAccountBalanceWallet color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => setCurrentSection(4)}
+              Selected={currentSection == 4}
+            />
+            <SubButtonRenderControl 
+              name="Tabela" 
+              icon={<MdTableChart color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => setCurrentSection(5)}
+              Selected={currentSection == 5}
+            />
+          </ButtonRenderControl>
           
         </div>
         <div className="ExitContent">
