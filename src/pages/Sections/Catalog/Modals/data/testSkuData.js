@@ -1,0 +1,9 @@
+export const testSkuDataList = [
+     {
+          id: '1',
+          description: 'Lorem ipsum dolor sit amet...',
+          date_of_register: '11/03/2022',
+          cost: 'R$ 0,00',
+          value: 'R$51651432,00'
+     }
+] 

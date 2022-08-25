@@ -1,8 +1,8 @@
 import './styles/FilledButtonComponent.scss'
 
-const FilledButton = ({ backgroundColor, fontColor, text, className, icon }) => {
+const FilledButton = ({ backgroundColor, fontColor, text, className, icon, onClick }) => {
      return (
-          <button className={'filled-button ' + className} style={{ 'background': backgroundColor, 'color': fontColor }}>
+          <button onClick={onClick} className={'filled-button ' + className} style={{ 'background': backgroundColor, 'color': fontColor }}>
                {icon}
                <span>{text}</span>
           </button>

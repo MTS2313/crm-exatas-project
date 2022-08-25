@@ -1,0 +1,54 @@
+.viewProductModal {
+     width: 100%;
+     height: 100%;
+     max-width: 1330px;
+     max-height: 880px;
+     .modalContentFields {
+          width: 100%;
+          gap: 20px;
+          display: flex;
+          margin-top: 20px;
+          align-items: flex-start;
+          .modalFieldsSelection {
+               width: 50%;
+               gap: 20px;
+               display: flex;
+               flex-direction: column;
+
+               .viewProductFieldName {
+                    margin-bottom: 40px;
+                    p {
+                         margin-bottom: 20px;
+                         color: rgba($color: #000000, $alpha: 0.7);
+                    }
+                    h3 {
+                         color: #1e1e1e;
+                         font-weight: bold;
+                    }
+               }
+               .viewProductFieldDesc {
+                    margin-bottom: 40px;
+                    p {
+                         margin-bottom: 20px;
+                         color: rgba($color: #000000, $alpha: 0.7);
+                    }
+                    h3 {
+                         color: #1e1e1e;
+                         font-weight: 400;
+                    }
+               }
+          }
+     }
+     .viewProductFooter {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .viewProductActions {
+               width: 100%;
+               display: flex;
+               align-items: flex-end;
+               justify-content: flex-end;
+          }
+     }
+}
