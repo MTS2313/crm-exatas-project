@@ -12,6 +12,7 @@ import Home from "./pages/Home/Home";
 import CreateAccount from "./pages/signup/CreateAccount";
 import Login from "./pages/signin/Login";
 import App from "./App";
+import Header from "./components/GlobalComponents/HeaderComponents/Header"
 
 export default function () {
   return (
@@ -23,6 +24,7 @@ export default function () {
         <Route path="/teste" element={<VendasScreen />} />
         <Route path="/testtable" element={<App />} />
         <Route path="/home" element={<Home />} />  
+        <Route path="/header" element={<Header />} />  
       </Routes>
     </BrowserRouter>
   );
