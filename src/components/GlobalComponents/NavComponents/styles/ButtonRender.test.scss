@@ -59,6 +59,14 @@
       animation: 0.5s fadeSvg forwards;
     }
   }
+  .ButtonRenderControl .SubButton {
+    h4{
+      animation: 0.5s fadeTextSub forwards;
+    }
+    svg{
+      animation: 0.5s fadeSvg forwards;
+    }
+  }
 }
 
 
@@ -118,6 +126,17 @@ div.DropContent {
   to {
     opacity: 1;
     font-size: 20px;
+  }
+}
+
+@keyframes fadeTextSub {
+  from {
+    opacity: 0;
+    font-size: 0;
+  }
+  to {
+    opacity: 1;
+    font-size: 14px;
   }
 }
 
