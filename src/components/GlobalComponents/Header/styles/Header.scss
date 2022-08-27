@@ -3,24 +3,24 @@
   height: 150px;
   width: 100%;
   justify-content: space-around;
+  font-family: "Inter";
   .NamePage {
     display: flex;
     align-self: center;
-    h1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    p {
       user-select: none;
-      font-family: "Inter";
       font-style: normal;
       font-weight: 400;
-      font-size: 40px;
-      line-height: 29px;
-      color: rgba(30, 30, 30, 0.7);
+      color: rgba(30, 30, 30, 1);
       span {
-        font-weight: 900;
-        color: rgba(30, 30, 30, 1);
+        font-weight: 800;
+        color: #1E1E1E;
       }
     }
   }
-  .ContentPages{
+  .BtnControl{
     display: flex;
     align-items: center;
     gap: 20px;
