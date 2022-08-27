@@ -77,9 +77,8 @@ const ViewProduct = ({ handleClose }) => {
                                                   :
                                                   <div className='modalOthersConfig'>
                                                        <div className='productImg'>
-                                                            <img src={'https://cdn.icon-icons.com/icons2/2348/PNG/512/image_picture_icon_143003.png'} />
+                                                            <input className='selectFile' accept="image/png, image/jpeg" type={'file'} /><img src={'https://cdn.icon-icons.com/icons2/2348/PNG/512/image_picture_icon_143003.png'} />
                                                        </div>
-
                                                   </div>
                                         }
                                    </div>
