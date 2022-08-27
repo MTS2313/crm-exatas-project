@@ -23,7 +23,7 @@ function ButtonRenderControl({
       >
         <span className="InfoBtnContent">
           {isOpen ? icon : Selected ? icon : iconNoselected}
-          {isOpen ? <h4 className="ButtonRenderName">{name}</h4> : null}
+          {isOpen && <h4 className="ButtonRenderName">{name}</h4>}
         </span>
         {isOpen ? (
           <MdExpandMore
