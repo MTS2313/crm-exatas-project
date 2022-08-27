@@ -3,6 +3,7 @@ import MenuContent from "../../components/Navbar/MenuContent";
 import NavContent from "../../components/SectionsNav/NavContent";
 import "./styles/Home.scss";
 import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
+import { useEffect } from "react";
 
 function Home() {
   const [componentActual, setComponentActual] = useState("");
@@ -19,7 +20,7 @@ function Home() {
         return <h3>case 2</h3>
         break;
       case 3:
-            setCurrentSection(4)
+        return <h3>case 3</h3>
         break;
       case 4:
         return <h3>case 4</h3>
@@ -31,6 +32,7 @@ function Home() {
         break;
     }
   }
+
   return (
     <div className="Home">
       <NavContent

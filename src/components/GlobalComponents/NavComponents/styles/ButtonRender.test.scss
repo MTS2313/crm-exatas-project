@@ -19,7 +19,57 @@
     line-height: 24px;
     color: #fff;
   }
+  &.isSelected {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  &.isExpanded{
+    background: rgba(255, 255, 255, 0.1);
+  }
+  &.ButtonBgControl {
+    background-color: transparent;
+  }
+
+  &.SubButton {
+    width: 100%;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+
+    h4 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    &.isSelected{
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
 }
+
+.largeNav{
+  .ButtonRenderControl:not(.SubButton) {
+    h4{
+      animation: 0.5s fadeText forwards;
+    }
+    svg{
+      animation: 0.5s fadeSvg forwards;
+    }
+  }
+  .ButtonRenderControl .SubButton {
+    h4{
+      animation: 0.5s fadeTextSub forwards;
+    }
+    svg{
+      animation: 0.5s fadeSvg forwards;
+    }
+  }
+}
+
+
 .ButtonRenderControlDrop {
   display: flex;
   border: none;
@@ -39,21 +89,16 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #fff;
+    color: #ffffff;
   }
 }
-.isSelected {
-  background: rgba(255, 255, 255, 0.1);
-}
-.ButtonBgControl {
-  background-color: transparent;
-}
+
 .DropOpen {
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in-out;
   transform: rotate(180deg);
 }
 .DropClosed {
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   transform: rotate(0deg);
 }
 .DropisSelected {
@@ -70,5 +115,38 @@ div.DropContent {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    font-size: 0;
+  }
+  to {
+    opacity: 1;
+    font-size: 20px;
+  }
+}
+
+@keyframes fadeTextSub {
+  from {
+    opacity: 0;
+    font-size: 0;
+  }
+  to {
+    opacity: 1;
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeSvg {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: auto;
   }
 }
