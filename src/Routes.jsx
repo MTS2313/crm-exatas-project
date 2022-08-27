@@ -22,9 +22,10 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
-        <Route path="/teste" element={<VendasScreen />} />
+        
+        {/* URLs  PARA TESTE */}
+        <Route path="/viewProduct" element={<ViewProduct />} />
         <Route path="/testtable" element={<App />} />
-        <Route path="/home" element={<ViewProduct />} />
       </Routes>
     </BrowserRouter>
   );
