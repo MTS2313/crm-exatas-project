@@ -8,7 +8,12 @@ import './style/ViewProduct.scss'
 import TableLayout from '../../../../components/Table/Table';
 import { testSkuDataList } from './data/testSkuData';
 import schema from "../../../../assets/data/tables/productSku.schema"
+import { useState } from 'react';
 const ViewProduct = ({ handleClose }) => {
+
+     const [skuAba, setSkuAba] = useState(0)
+
+     const toggleSkuAba = (i) => setSkuAba(i)
 
      return (
           <Modal
@@ -61,11 +66,13 @@ const ViewProduct = ({ handleClose }) => {
                          <div className="viewProductFooter">
                               <div className='modalSku'>
                                    <div className='modalSkuActions'>
-                                        <button className='modalSkuActionButton active'>SKUs</button>
-                                        <button className='modalSkuActionButton'>Outros</button>
+                                        <button onClick={() => { toggleSkuAba(0) }} className={skuAba === 0 ? 'modalSkuActionButton active' : 'modalSkuActionButton'}>SKUs</button>
+                                        <button onClick={() => { toggleSkuAba(1) }} className={skuAba === 1 ? 'modalSkuActionButton active' : 'modalSkuActionButton'}>Outros</button>
                                    </div>
                                    <div className='modalSkuBase'>
-                                        <TableLayout schema={schema} data={testSkuDataList}/>
+                                        {
+                                             skuAba === 0 ? <TableLayout schema={schema} data={testSkuDataList} /> : <h1>Outros</h1>
+                                        }
                                    </div>
                               </div>
                               <div className='viewProductActions'>
