@@ -1,7 +1,8 @@
 import React from "react";
 import "./assets/font/interweb/inter.css";
 import "./assets/styles/config.global.css";
-import {BrowserRouter,
+import {
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -12,6 +13,7 @@ import Home from "./pages/Home/Home";
 import CreateAccount from "./pages/signup/CreateAccount";
 import Login from "./pages/signin/Login";
 import App from "./App";
+import ViewProduct from "./pages/Sections/Catalog/Modals/ViewProduct";
 
 export default function () {
   return (
@@ -20,9 +22,10 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
-        <Route path="/teste" element={<VendasScreen />} />
+        
+        {/* URLs  PARA TESTE */}
+        <Route path="/viewProduct" element={<ViewProduct />} />
         <Route path="/testtable" element={<App />} />
-        <Route path="/home" element={<Home />} />  
       </Routes>
     </BrowserRouter>
   );
