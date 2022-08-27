@@ -71,7 +71,16 @@ const ViewProduct = ({ handleClose }) => {
                                    </div>
                                    <div className='modalSkuBase'>
                                         {
-                                             skuAba === 0 ? <TableLayout schema={schema} data={testSkuDataList} /> : <h1>Outros</h1>
+                                             skuAba === 0
+                                                  ?
+                                                  <TableLayout schema={schema} data={testSkuDataList} />
+                                                  :
+                                                  <div className='modalOthersConfig'>
+                                                       <div className='productImg'>
+                                                            <img src={'https://cdn.icon-icons.com/icons2/2348/PNG/512/image_picture_icon_143003.png'} />
+                                                       </div>
+
+                                                  </div>
                                         }
                                    </div>
                               </div>
