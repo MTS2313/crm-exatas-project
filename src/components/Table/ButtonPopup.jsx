@@ -1,6 +1,7 @@
 import {options as Icon} from '../../assets/svg/table.jsx'
 import {useOutsideAlerter} from '../utils/ClickOutside'
 import { useRef } from 'react'
+import {FaTrashAlt,FaRegEye,FaRegEdit} from 'react-icons/fa'
 
 const ButtonPopup = ({
     onView, 
@@ -30,18 +31,29 @@ const ButtonPopup = ({
             {/* -------------- OPTIONS container */}
             {popup == index && (
                 <div className='containerOptions' ref={wrapperRef1}>
-                    {/* ------ On view */}
-                    <button className='view' onClick={onView}>
-                        Ver
-                    </button>
-                    {/* ------ On update */}
-                    <button className='update' onClick={onUpdate}>
-                        Editar
-                    </button>
-                    {/* ------ On update */}
-                    <button className='delete' onClick={onDelete}>
-                        Excluir
-                    </button>
+                    <div className='containerOptions--body'>
+                        {/* ------ On view */}
+                        <button className='view' onClick={onView}>
+                            <FaRegEye />
+                            <span>
+                                Ver
+                            </span>
+                        </button>
+                        {/* ------ On update */}
+                        <button className='update' onClick={onUpdate}>
+                            <FaRegEdit />
+                            <span>
+                                Editar
+                            </span>
+                        </button>
+                        {/* ------ On update */}
+                        <button className='delete' onClick={onDelete}>
+                            <FaTrashAlt />
+                            <span>
+                                Excluir
+                            </span>
+                        </button>
+                    </div>
                 </div>
             )}
         </div>

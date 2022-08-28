@@ -4,6 +4,7 @@ import ButtonPopup from './ButtonPopup'
 import { useEffect, useState } from 'react'
 import ModalViewItem from '../Modais/Table/ViewItem'
 import ModalUpdateItem from '../Modais/Table/UpdateItem'
+import Table from 'react'
 
 
 const TableLayout = ({ schema, data }) => {
