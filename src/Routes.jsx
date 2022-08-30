@@ -12,6 +12,7 @@ import Login from "./pages/signin/Login";
 import App from "./App";
 import ViewProduct from "./pages/Sections/Catalog/Modals/ViewProduct";
 import Catalog from "./pages/Sections/Catalog/Catalog";
+import Home from "./pages/Home/Home";
 
 export default function () {
   return (
@@ -20,7 +21,7 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
-        
+        <Route path="/home" element={<Home/>}/>
         {/* URLs  PARA TESTE */}
         <Route path="/viewProduct" element={<ViewProduct />} />
         <Route path="/testtable" element={<App />} />

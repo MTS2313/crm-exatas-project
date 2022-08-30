@@ -3,6 +3,7 @@ import MenuContent from "../../components/Navbar/MenuContent";
 import NavContent from "../../components/SectionsNav/NavContent";
 import "./styles/Home.scss";
 import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
+import Catalog from "../Sections/Catalog/Catalog";
 
 function Home() {
   const [componentActual, setComponentActual] = useState("");
@@ -13,10 +14,9 @@ function Home() {
         return <DashboardScreen/>
         break;
       case 1:
-        return<h3>case 1</h3>
         break;
-      case 2:
-        return <h3>case 2</h3>
+        case 2:
+        return <Catalog/>
         break;
       case 3:
             setCurrentSection(4)

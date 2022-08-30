@@ -6,7 +6,7 @@ import ModalTextField from '../../../../components/Modal/ModalTextField/ModalTex
 import FilledButton from '../../../../components/Portfolio/FilledButtonComponent';
 import './style/ViewProduct.scss'
 import TableLayout from '../../../../components/Table/Table';
-import { testSkuDataList } from './data/testSkuData';
+import  testSkuDataList  from './data/testSkuData';
 import schema from "../../../../assets/data/tables/productSku.schema"
 import { useState } from 'react';
 const ViewProduct = ({ handleClose }) => {
