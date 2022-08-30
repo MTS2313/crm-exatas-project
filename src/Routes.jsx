@@ -7,13 +7,12 @@ import {
   Route,
 } from "react-router-dom";
 import Portfolio from "./pages/Portfolio/Portfolio";
-import DashboardScreen from "./components/CRM/CRMPages/Dashboard";
-import VendasScreen from "./components/CRM/CRMPages/Vendas";
-import Home from "./pages/Home/Home";
 import CreateAccount from "./pages/signup/CreateAccount";
 import Login from "./pages/signin/Login";
 import App from "./App";
 import ViewProduct from "./pages/Sections/Catalog/Modals/ViewProduct";
+import Catalog from "./pages/Sections/Catalog/Catalog";
+import Home from "./pages/Home/Home";
 
 export default function () {
   return (
@@ -22,10 +21,11 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
-        
+        <Route path="/home" element={<Home/>}/>
         {/* URLs  PARA TESTE */}
         <Route path="/viewProduct" element={<ViewProduct />} />
         <Route path="/testtable" element={<App />} />
+        <Route path="/cata" element={<Catalog/>}/>
       </Routes>
     </BrowserRouter>
   );
