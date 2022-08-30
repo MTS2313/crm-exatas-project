@@ -19,7 +19,7 @@ function Home() {
         return <Catalog/>
         break;
       case 3:
-            setCurrentSection(4)
+        return <h3>case 3</h3>
         break;
       case 4:
         return <h3>case 4</h3>
@@ -31,6 +31,7 @@ function Home() {
         break;
     }
   }
+
   return (
     <div className="Home">
       <NavContent
