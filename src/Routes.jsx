@@ -22,6 +22,8 @@ export default function () {
         <Route path="/" element={<Portfolio />} exact />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<CreateAccount />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/home/:section" element={<Home />} />
         
         {/* URLs  PARA TESTE */}
         <Route path="/viewProduct" element={<ViewProduct />} />
