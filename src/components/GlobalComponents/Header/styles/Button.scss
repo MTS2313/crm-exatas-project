@@ -1,0 +1,20 @@
+.DefaultButtonComponent {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+  background: #2A7FFA;
+  gap: 5px;
+  svg{
+    font-size: 1.4rem;
+  }
+  p{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 700;
+  }
+}

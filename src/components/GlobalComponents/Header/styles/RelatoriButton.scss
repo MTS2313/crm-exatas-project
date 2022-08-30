@@ -1,0 +1,22 @@
+.RelatoriButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 150px;
+  outline: 2px solid #2A7FFA1A;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2a7ffa05;
+  gap: 10px;
+  user-select: none;
+  svg{
+    color: #2a81fa8e;
+  }
+  p{
+    font-size: 1.2rem;
+    color: #2A7FFA80;
+    font-family: Inter;
+    font-weight: 600;
+  }
+}

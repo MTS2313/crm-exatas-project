@@ -1,8 +1,13 @@
 .Home{
     width: 100vw;
     height: 100vh;
+overflow: hidden;
     display: flex;
     .RenderContent{
         margin: 0px auto;
     }
+}
+.RenderContent{
+    width: inherit;
+    height: 100vh;
 }

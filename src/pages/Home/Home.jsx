@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuContent from "../../components/Navbar/MenuContent";
 import NavContent from "../../components/SectionsNav/NavContent";
 import "./styles/Home.scss";
 import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Catalog from "../Sections/Catalog/Catalog";
 
 function Home() {
   const [componentActual, setComponentActual] = useState("");
@@ -26,9 +26,9 @@ function Home() {
       case 0:
         return <DashboardScreen/>
       case 1:
-        return<h3>Relatorio</h3>
+        return <h3>Relatorio</h3>
       case 2:
-        return <h3>Tabela</h3>
+        return <Catalog/>
       case 3:
         return <h3>case 3</h3>
       case 4:
