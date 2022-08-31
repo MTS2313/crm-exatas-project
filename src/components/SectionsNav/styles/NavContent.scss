@@ -3,6 +3,7 @@
   background-color: #2b2b2b;
   transition: all 0.3s ease-in-out;
   box-sizing: border-box;
+  z-index: 10;
 
   &.smallNav {
     min-width: 5rem;
@@ -72,7 +73,6 @@
   align-items: center;
   height: 30px;
   margin-bottom: 40px;
-  margin-left: 20px;
   justify-content: start;
   gap: 10px;
   h3 {

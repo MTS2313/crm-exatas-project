@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropsTypes from "prop-types";
 import styled from "styled-components";
+import { useOutsideAlerter } from "../../utils/ClickOutside";
 import { MdExpandMore } from "react-icons/md";
 import "./styles/ButtonRender.test.scss";
 function ButtonRenderControl({
@@ -9,11 +10,18 @@ function ButtonRenderControl({
   iconNoselected,
   isDrop,
   isOpen,
+  setButtonExpanded,
   Selected,
   isButtonExpanded,
   onClick,
   children
 }) {
+
+
+  const wrapperRefDropContent = useRef(null);
+  useOutsideAlerter(wrapperRefDropContent, () => {
+    setButtonExpanded(null)
+  })
   return isDrop ? (
     // when button is Drop
     <>
@@ -34,8 +42,15 @@ function ButtonRenderControl({
         ) : null}
       </button>
 
+      {/* --------------- OPEN */}
       {isButtonExpanded && isOpen && (
         <div className="DropContent">
+          {children}
+        </div>
+      )}
+      {/* --------------- NOT OPEN */}
+      {isButtonExpanded && !isOpen && (
+        <div className="DropContentClosed" ref={wrapperRefDropContent}>
           {children}
         </div>
       )}
