@@ -35,6 +35,12 @@ function Home() {
         return <h3>case 4</h3>
       case 5:
           return <h3>case 5</h3>        
+      case 6:
+          return <h3>case 6</h3>        
+      case 7:
+          return <h3>case 7</h3>        
+      case 8:
+          return <h3>case 8</h3>        
       default:
         break;
     }

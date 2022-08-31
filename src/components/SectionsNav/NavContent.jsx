@@ -59,7 +59,6 @@ function NavContent({ currentSection, setCurrentSection }) {
             isDrop={false}
             isOpen={NavState}
             onClick={() => {
-              if(!NavState) NavWidthControl(false);
               setButtonExpanded(null)
               setCurrentSection(0);
             }}
@@ -75,10 +74,9 @@ function NavContent({ currentSection, setCurrentSection }) {
           isOpen={NavState}
           isButtonExpanded={buttonExpanded == 'venda'}
           onClick={() => {
-            if(!NavState) NavWidthControl(false);
-
             setButtonExpanded((el) => el == 'venda' ? null : 'venda')
           }}
+          setButtonExpanded={setButtonExpanded}
           name="venda"
           Selected={[2,3].includes(currentSection)}
           icon={<MdShoppingCart color="#fff" size={"2rem"}/>} 
@@ -87,13 +85,23 @@ function NavContent({ currentSection, setCurrentSection }) {
             <SubButtonRenderControl 
               name="Nova Venda" 
               icon={<MdAccountBalanceWallet color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => setCurrentSection(2)}
+              onClick={() => {
+                setCurrentSection(2)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
               Selected={currentSection == 2}
             />
             <SubButtonRenderControl 
               name="Relatório" 
               icon={<MdTableChart color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => setCurrentSection(3)}
+              onClick={() => {
+                setCurrentSection(3)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
               Selected={currentSection == 3}
             />
           </ButtonRenderControl>
@@ -103,10 +111,9 @@ function NavContent({ currentSection, setCurrentSection }) {
           isOpen={NavState}
           isButtonExpanded={buttonExpanded == 'financeiro'}
           onClick={() => {
-            if(!NavState) NavWidthControl(false);
-
             setButtonExpanded((el) => el == 'financeiro' ? null : 'financeiro')
           }}
+          setButtonExpanded={setButtonExpanded}
           name="Financeiro"
           Selected={[4,5].includes(currentSection)}
           icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
@@ -115,13 +122,23 @@ function NavContent({ currentSection, setCurrentSection }) {
             <SubButtonRenderControl 
               name="Contas a Pagar" 
               icon={<MdTrendingDown color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => setCurrentSection(4)}
+              onClick={() => {
+                setCurrentSection(4)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
               Selected={currentSection == 4}
             />
             <SubButtonRenderControl 
               name="Contas a Receber" 
               icon={<MdTrendingUp color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => setCurrentSection(5)}
+              onClick={() => {
+                setCurrentSection(5)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
               Selected={currentSection == 5}
             />
           </ButtonRenderControl>
@@ -130,7 +147,6 @@ function NavContent({ currentSection, setCurrentSection }) {
             isDrop={false}
             isOpen={NavState}
             onClick={() => {
-              if(!NavState) NavWidthControl(false);
               setButtonExpanded(null)
               setCurrentSection(6);
             }}
@@ -145,7 +161,6 @@ function NavContent({ currentSection, setCurrentSection }) {
             isDrop={false}
             isOpen={NavState}
             onClick={() => {
-              if(!NavState) NavWidthControl(false);
               setButtonExpanded(null)
               setCurrentSection(7);
             }}
@@ -162,7 +177,6 @@ function NavContent({ currentSection, setCurrentSection }) {
             isDrop={false}
             isOpen={NavState}
             onClick={() => {
-              if(!NavState) NavWidthControl(false);
               setButtonExpanded(null)
               setCurrentSection(8);
             }}

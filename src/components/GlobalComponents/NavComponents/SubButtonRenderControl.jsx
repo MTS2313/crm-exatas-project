@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import PropsTypes from "prop-types";
-import styled from "styled-components";
-import { MdOutlineChevronRight } from "react-icons/md";
+import React from "react";
 import "./styles/ButtonRender.test.scss";
 function ButtonRenderControl({
   name,
