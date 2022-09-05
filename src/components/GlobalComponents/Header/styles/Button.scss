@@ -7,14 +7,16 @@
   justify-content: center;
   height: 50px;
   width: 150px;
-  background: #2A7FFA;
+  background: #2a7ffa;
   gap: 5px;
-  svg{
+  svg {
     font-size: 1.4rem;
   }
-  p{
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
     font-size: 1rem;
     color: #fff;
-    font-weight: 700;
   }
 }
