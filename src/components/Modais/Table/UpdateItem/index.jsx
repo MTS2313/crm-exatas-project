@@ -16,7 +16,7 @@ const ModalUpdateItem = ({
       <Modal 
            isOpen={show}
            className="Modal ModalUpdateItem"
-           overlayClassName="Overlay"
+           overlayClassName="overlay"
            onRequestClose={handleClose}
            shouldCloseOnOverlayClick={false}
         >

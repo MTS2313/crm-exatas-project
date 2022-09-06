@@ -12,25 +12,44 @@ function Home() {
   const {section} = useParams()
 
   useEffect(() => {
+    console.log('testhg 2', section)
     if(section){
       switch(section){
-        case 'vendas':
+        case 'vendas-relatorio':
           setCurrentSection(2)
           break;
       }
     }
   }, [section])
 
+  useEffect(() => {
+    if(currentSection){
+      switch(currentSection){
+        case 2:
+          setPathName('vendas-relatorio')
+        break;
+      }
+            
+    }
+  }, [currentSection])
+
+  function setPathName(section){
+    const path = `/home/${section}`
+    if(window?.location.pathname != path){
+      window.location.pathname = path
+    }
+  }
+
   function SelectRender() {
     switch (currentSection) {
       case 0:
         return <DashboardScreen/>
       case 1:
-        return <h3>Relatorio</h3>
+        return <h3>Nova Venda</h3>
       case 2:
-        return <Catalog/>
+          return <Catalog/>
       case 3:
-        return <h3>case 3</h3>
+          return <h3>test</h3>
       case 4:
         return <h3>case 4</h3>
       case 5:

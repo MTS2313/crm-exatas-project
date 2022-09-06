@@ -1,4 +1,5 @@
 import Modal from 'react-modal';
+import { useState } from 'react';
 import '../../../../components/Modal/style/Modal.scss'
 import { close as CloseIcon } from '../../../../assets/svg/table.jsx'
 import ModalIDTextField from '../../../../components/Modal/ModalTextField/ModalIDTextField';
@@ -8,21 +9,21 @@ import './style/ViewProduct.scss'
 import TableLayout from '../../../../components/Table/Table';
 import  testSkuDataList  from './data/testSkuData';
 import schema from "../../../../assets/data/tables/productSku.schema"
-import { useState } from 'react';
-const ViewProduct = ({ handleClose }) => {
 
+Modal.setAppElement('#crmbody');
+
+const ViewProduct = ({ handleClose, show }) => {
      const [skuAba, setSkuAba] = useState(0)
 
      const toggleSkuAba = (i) => setSkuAba(i)
 
      return (
           <Modal
-               isOpen={true}
+               isOpen={show}
                className="modal viewProductModal"
                overlayClassName="overlay"
                onRequestClose={handleClose}
-               shouldCloseOnOverlayClick={false}
-          >
+               shouldCloseOnOverlayClick={false}>
                <div className="modalContainer">
                     {/* --------------- HEADER */}
                     <div className="modalHeader">
@@ -85,4 +86,4 @@ const ViewProduct = ({ handleClose }) => {
      );
 }
 
-export default ViewProduct;
+export default ViewProduct

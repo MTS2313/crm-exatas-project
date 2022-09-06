@@ -78,7 +78,7 @@ function NavContent({ currentSection, setCurrentSection }) {
           }}
           setButtonExpanded={setButtonExpanded}
           name="venda"
-          Selected={[2,3].includes(currentSection)}
+          Selected={[1,2].includes(currentSection)}
           icon={<MdShoppingCart color="#fff" size={"2rem"}/>} 
           iconNoselected={<MdShoppingCart size={"2rem"} opacity={"50%"} color="#fff" />}
           >
@@ -86,23 +86,23 @@ function NavContent({ currentSection, setCurrentSection }) {
               name="Nova Venda" 
               icon={<MdAccountBalanceWallet color="#ffffff" size={"1.5rem"}/>} 
               onClick={() => {
+                setCurrentSection(1)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
+              Selected={currentSection == 1}
+            />
+            <SubButtonRenderControl 
+              name="Relatório" 
+              icon={<MdTableChart color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => {
                 setCurrentSection(2)
                 if(!NavState){
                   setButtonExpanded(null)
                 }
               }}
               Selected={currentSection == 2}
-            />
-            <SubButtonRenderControl 
-              name="Relatório" 
-              icon={<MdTableChart color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => {
-                setCurrentSection(3)
-                if(!NavState){
-                  setButtonExpanded(null)
-                }
-              }}
-              Selected={currentSection == 3}
             />
           </ButtonRenderControl>
 {/* ---------------------------- FINANCEIRO ---------------------------- */}
@@ -115,13 +115,24 @@ function NavContent({ currentSection, setCurrentSection }) {
           }}
           setButtonExpanded={setButtonExpanded}
           name="Financeiro"
-          Selected={[4,5].includes(currentSection)}
+          Selected={[3,4].includes(currentSection)}
           icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
           iconNoselected={<MdAttachMoney size={"2rem"} opacity={"50%"} color="#fff" />}
           >
             <SubButtonRenderControl 
               name="Contas a Pagar" 
               icon={<MdTrendingDown color="#ffffff" size={"1.5rem"}/>} 
+              onClick={() => {
+                setCurrentSection(3)
+                if(!NavState){
+                  setButtonExpanded(null)
+                }
+              }}
+              Selected={currentSection == 3}
+            />
+            <SubButtonRenderControl 
+              name="Contas a Receber" 
+              icon={<MdTrendingUp color="#ffffff" size={"1.5rem"}/>} 
               onClick={() => {
                 setCurrentSection(4)
                 if(!NavState){
@@ -130,17 +141,6 @@ function NavContent({ currentSection, setCurrentSection }) {
               }}
               Selected={currentSection == 4}
             />
-            <SubButtonRenderControl 
-              name="Contas a Receber" 
-              icon={<MdTrendingUp color="#ffffff" size={"1.5rem"}/>} 
-              onClick={() => {
-                setCurrentSection(5)
-                if(!NavState){
-                  setButtonExpanded(null)
-                }
-              }}
-              Selected={currentSection == 5}
-            />
           </ButtonRenderControl>
 {/* ---------------------------- CLIENTES ---------------------------- */}
       <ButtonRenderControl
@@ -148,10 +148,10 @@ function NavContent({ currentSection, setCurrentSection }) {
             isOpen={NavState}
             onClick={() => {
               setButtonExpanded(null)
-              setCurrentSection(6);
+              setCurrentSection(5);
             }}
             name="Clientes"
-            Selected={currentSection === 6}
+            Selected={currentSection === 5}
             icon={<MdPerson color="#fff" size={"2rem"} />}
             iconNoselected={<MdPerson size={"2rem"} opacity={"50%"} color="#fff" />}
             iconSelected={<MdPerson size={"2rem"} color="#fff" />}
@@ -162,10 +162,10 @@ function NavContent({ currentSection, setCurrentSection }) {
             isOpen={NavState}
             onClick={() => {
               setButtonExpanded(null)
-              setCurrentSection(7);
+              setCurrentSection(6);
             }}
             name="Estoque"
-            Selected={currentSection === 7}
+            Selected={currentSection === 6}
             icon={<MdInventory color="#fff" size={"2rem"} />}
             iconNoselected={<MdInventory size={"2rem"} opacity={"50%"} color="#fff" />}
             iconSelected={<MdInventory size={"2rem"} color="#fff" />}
@@ -178,10 +178,10 @@ function NavContent({ currentSection, setCurrentSection }) {
             isOpen={NavState}
             onClick={() => {
               setButtonExpanded(null)
-              setCurrentSection(8);
+              setCurrentSection(7);
             }}
             name="Configurações"
-            Selected={currentSection === 8}
+            Selected={currentSection === 7}
             icon={<MdSettings color="#fff" size={"2rem"} />}
             iconNoselected={<MdSettings size={"2rem"} opacity={"50%"} color="#fff" />}
             iconSelected={<MdSettings size={"2rem"} color="#fff" />}
