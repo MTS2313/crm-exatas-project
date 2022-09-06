@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import ModalViewItem from '../Modais/Table/ViewItem'
 import ModalUpdateItem from '../Modais/Table/UpdateItem'
 import Table from 'react'
+import ViewProduct from '../../pages/Sections/Catalog/Modals/ViewProduct'
 
 
 const TableLayout = ({ schema, data }) => {
@@ -83,10 +84,10 @@ const TableLayout = ({ schema, data }) => {
                 handleClose={handleClose}
             />
         {/* -------------------- MODAL View Item */}
-            <ModalViewItem
-                displayModal={displayModal}
-                index={indexItem}
-                item={data[indexItem]}
+            <ViewProduct
+                // displayModal={displayModal}
+                // index={indexItem}
+                // item={data[indexItem]}
                 show={showModal == 'view'}
                 handleClose={handleClose}
             />

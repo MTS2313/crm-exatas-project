@@ -13,6 +13,7 @@ import App from "./App";
 import ViewProduct from "./pages/Sections/Catalog/Modals/ViewProduct";
 import Catalog from "./pages/Sections/Catalog/Catalog";
 import Home from "./pages/Home/Home";
+import UpdateProduct from "./pages/Sections/Catalog/Modals/UpdateProduct";
 
 export default function () {
   return (
@@ -27,7 +28,7 @@ export default function () {
         {/* URLs  PARA TESTE */}
         <Route path="/viewProduct" element={<ViewProduct />} />
         <Route path="/testtable" element={<App />} />
-        <Route path="/cata" element={<Catalog/>}/>
+        <Route path="/updatepd" element={<UpdateProduct/>} />
       </Routes>
     </BrowserRouter>
   );
