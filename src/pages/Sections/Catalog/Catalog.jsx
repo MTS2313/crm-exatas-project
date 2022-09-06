@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../components/GlobalComponents/Header/Header";
-import TableLayout from "../../../components/Table/Table";
+import TableLayout from "./Table/Table";
 import testSkuDataList from "./Modals/data/testSkuData";
 import schema from "../../../assets/data/tables/product.schema";
 import "./Modals/style/Catalog.scss"

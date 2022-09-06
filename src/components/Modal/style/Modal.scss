@@ -1,3 +1,7 @@
+.ReactModalPortal{
+     position: absolute;
+     top: 0px;
+}
 .modal {
      position: absolute;
      top: 50%;
@@ -50,6 +54,7 @@
 }
 
 .overlay {
+     z-index: 10;
      position: fixed;
      width: 100%;
      height: 100vh;
