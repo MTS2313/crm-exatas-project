@@ -1,16 +1,14 @@
 import './styles/Table.scss'
-import ModalConfirmDelete from '../Modais/Table/ConfirmDelete'
-import ButtonPopup from './ButtonPopup'
-import { useEffect, useState } from 'react'
-import ModalViewItem from '../Modais/Table/ViewItem'
-import ModalUpdateItem from '../Modais/Table/UpdateItem'
+import ButtonPopup from './ButtonPopupSku'
+import ModalUpdateSku from '../Modals/UpdateSku'
+import { useContext, useEffect, useState } from 'react'
+import { ModalContext } from '../Context/ModalContext'
 
 
-const TableLayout = ({ schema, data }) => {
-
+const TableSku = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
     // showModal is relative to its modal, such as delete, view, update, or null
-    const [showModal, setShowModal] = useState(null)
+    const {showModal, setShowModal} = useContext(ModalContext)
     const [indexItem, setIndexItem] = useState(null)
 
     useEffect(() => {
@@ -29,14 +27,11 @@ const TableLayout = ({ schema, data }) => {
         setIndexItem(index)
 
         switch(modal){
-            case 'delete':
-                setShowModal('delete')
+            case 'delete-sku':
+                setShowModal('delete-sku')
             break;
-            case 'view':
-                setShowModal('view')
-            break;
-            case 'update':
-                setShowModal('update')
+            case 'update-sku':
+                setShowModal('update-sku')
             break;
         }
 
@@ -61,9 +56,8 @@ const TableLayout = ({ schema, data }) => {
                 })}
                 <td>
                     <ButtonPopup 
-                        onView={() => displayModal('view', index)} 
-                        onDelete={() => displayModal('delete', index)} 
-                        onUpdate={() => displayModal('update', index)} 
+                        onDelete={() => displayModal('delete-sku', index)} 
+                        onUpdate={() => displayModal('update-sku', index)} 
                         index={index}
                         popup={popup}
                         setPopup={setPopup}
@@ -75,28 +69,6 @@ const TableLayout = ({ schema, data }) => {
 
     return (
         <>
-        {/* -------------------- MODAL Confirm Delete */}
-            <ModalConfirmDelete
-                onDelete={onDelete}
-                show={showModal == 'delete'}
-                handleClose={handleClose}
-            />
-        {/* -------------------- MODAL View Item */}
-            <ModalViewItem
-                displayModal={displayModal}
-                index={indexItem}
-                item={data[indexItem]}
-                show={showModal == 'view'}
-                handleClose={handleClose}
-            />
-        {/* -------------------- MODAL Update Item */}
-            <ModalUpdateItem
-                displayModal={displayModal}
-                index={indexItem}
-                item={data[indexItem]}
-                show={showModal == 'update'}
-                handleClose={handleClose}
-            />
             <table responsive className='tablelayout' cellSpacing="0"> 
                 <thead>
                     <tr>
@@ -118,4 +90,4 @@ const TableLayout = ({ schema, data }) => {
     )
 }
 
-export default TableLayout
+export default TableSku

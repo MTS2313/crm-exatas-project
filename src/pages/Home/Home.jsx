@@ -12,7 +12,6 @@ function Home() {
   const {section} = useParams()
 
   useEffect(() => {
-    console.log('testhg 2', section)
     if(section){
       switch(section){
         case 'vendas-relatorio':

@@ -74,7 +74,6 @@
         background: #F4F4F4;
         border-radius: 8px;
         width: 210px;
-        height: 180px;
         left: -210px;
         top: -90px;
         padding-top: 12px;   
@@ -141,6 +140,12 @@
                     background: rgba(213, 115, 115, 0.276);
                 }
             }
+        }
+    }
+
+    &.skuPopup{
+        .containerOptions{
+            top: -65px;
         }
     }
 }
