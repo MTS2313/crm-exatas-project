@@ -3,6 +3,8 @@ import ButtonPopup from './ButtonPopup'
 import { useEffect, useState } from 'react'
 import ModalViewProduct from '../Modals/ViewProduct'
 import ModalUpdateProduct from '../Modals/UpdateProduct'
+import ModalUpdateSku from '../Modals/UpdateSku'
+import { ModalContext } from '../Context/ModalContext'
 
 
 
@@ -68,39 +70,45 @@ const TableLayout = ({ schema, data }) => {
     }
 
     return (
-        <>
-        {/* -------------------- MODAL ViewProduct */}
-            <ModalViewProduct
-                show={showModal == 'view-product'}
-                handleClose={handleClose}
-            />
-            <ModalUpdateProduct
-                show={showModal == 'update-product'}
-                handleClose={handleClose}
-            />
-            {/* <ModalDeleteProduct
-                show={showModal == 'delete-product'}
-                handleClose={handleClose}
-            /> */}
+        <ModalContext.Provider value={{showModal, setShowModal}}>
+                {/* -------------------- MODAL ViewProduct */}
+                <ModalViewProduct
+                    show={showModal == 'view-product'}
+                    handleClose={handleClose}
+                    />
+                {/* -------------------- MODAL UpdateProduct */}
+                <ModalUpdateProduct
+                    show={showModal == 'update-product'}
+                    handleClose={handleClose}
+                    />
+                {/* -------------------- MODAL UpdateSKU */}
+                <ModalUpdateSku 
+                    handleClose={handleClose}
+                    show={showModal == 'update-sku'}
+                    />
+                {/* <ModalDeleteProduct
+                    show={showModal == 'delete-product'}
+                    handleClose={handleClose}
+                /> */}
 
-            <table responsive className='tablelayout' cellSpacing="0"> 
-                <thead>
-                    <tr>
-                        {schema.properties.map(({name,colgap}, index) => (
-                            <th colSpan={colgap} key={index}>
-                                {name}
+                <table responsive className='tablelayout' cellSpacing="0"> 
+                    <thead>
+                        <tr>
+                            {schema.properties.map(({name,colgap}, index) => (
+                                <th colSpan={colgap} key={index}>
+                                    {name}
+                                </th>
+                            ))}
+
+                            <th key='options'>
                             </th>
-                        ))}
-
-                        <th key='options'>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((item, index) => buildRow(item, index))}
-                </tbody>
-        </table>
-        </>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((item, index) => buildRow(item, index))}
+                    </tbody>
+            </table>
+        </ModalContext.Provider>
     )
 }
 

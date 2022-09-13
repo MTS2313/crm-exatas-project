@@ -6,7 +6,7 @@ import ModalIDTextField from '../../../../components/Modal/ModalTextField/ModalI
 import ModalTextField from '../../../../components/Modal/ModalTextField/ModalTextField';
 import FilledButton from '../../../../components/Portfolio/FilledButtonComponent';
 import './style/ViewProduct.scss'
-import TableLayout from '../../../../components/Table/Table';
+import TableSku from '../Table/TableSku';
 import  testSkuDataList  from './data/testSkuData';
 import schema from "../../../../assets/data/tables/productSku.schema"
 
@@ -67,13 +67,12 @@ const ViewProduct = ({ handleClose, show }) => {
                          <div className="viewProductFooter">
                               <div className='modalSku'>
                                    <div className='modalSkuActions'>
-                                        <button onClick={() => { toggleSkuAba(0) }} className={skuAba === 0 ? 'modalSkuActionButton active' : 'modalSkuActionButton'}>SKUs</button>
-                                        <button onClick={() => { toggleSkuAba(1) }} className={skuAba === 1 ? 'modalSkuActionButton active' : 'modalSkuActionButton'}>Outros</button>
+                                        <button onClick={() => { toggleSkuAba(0) }} className={`modalSkuActionButton ${skuAba == 0 && 'active'}`}>SKUs</button>
+                                        <button onClick={() => { toggleSkuAba(1) }} className={`modalSkuActionButton ${skuAba == 1 && 'active'}`}>Outros</button>
                                    </div>
                                    <div className='modalSkuBase'>
-                                        {
-                                             skuAba === 0 ? <TableLayout schema={schema} data={testSkuDataList} /> : <h1>Outros</h1>
-                                        }
+                                        {skuAba === 0 && <TableSku schema={schema} data={testSkuDataList} />} 
+                                        {skuAba === 1 && <h1>Outros</h1>}
                                    </div>
                               </div>
                               <div className='viewProductActions'>
