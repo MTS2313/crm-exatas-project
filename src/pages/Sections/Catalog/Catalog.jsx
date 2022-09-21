@@ -7,7 +7,7 @@ import "./Modals/style/Catalog.scss"
 function Catalog() {
   return (
     <div className="Catalog">
-      <Header PageName={"Produtos"} SubPageName="s" />
+      <Header PageName={"Produtos"} SubPageName="s" hasReport={true} hasAddButton={true} />
       <div className="TableContent">
         <TableLayout data={testSkuDataList} schema={schema} />
       </div>

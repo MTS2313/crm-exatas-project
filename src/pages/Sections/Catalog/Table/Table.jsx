@@ -91,7 +91,7 @@ const TableLayout = ({ schema, data }) => {
                     handleClose={handleClose}
                 /> */}
 
-                <table responsive className='tablelayout' cellSpacing="0"> 
+                <table className='tablelayout' cellSpacing="0"> 
                     <thead>
                         <tr>
                             {schema.properties.map(({name,colgap}, index) => (

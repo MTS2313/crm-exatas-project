@@ -15,6 +15,7 @@ import {
 import "./styles/NavContent.scss";
 import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl";
 import SubButtonRenderControl from "../GlobalComponents/NavComponents/SubButtonRenderControl";
+import { FormattedMessage } from "react-intl";
 
 function NavContent({ currentSection, setCurrentSection }) {
   const [NavState, setNavState] = useState(true);
@@ -50,11 +51,9 @@ function NavContent({ currentSection, setCurrentSection }) {
           <div className="Stroke3" />
         </button>
         <div className={DivBarControl} />
-        <div
-          className={`${
+        <div className={`${
             NavState ? "SectionSelectTrue" : "SectionSelectFalse"
-          } ContentButtonsRender`}
-        >
+          } ContentButtonsRender`} >
           <ButtonRenderControl
             isDrop={false}
             isOpen={NavState}
@@ -62,7 +61,7 @@ function NavContent({ currentSection, setCurrentSection }) {
               setButtonExpanded(null)
               setCurrentSection(0);
             }}
-            name="DashBoard"
+            name={<FormattedMessage id="navbar.dashboard.text" />}
             Selected={currentSection === 0}
             icon={<MdDashboard color="#fff" size={"2rem"} />}
             iconNoselected={<MdDashboard size={"2rem"} opacity={"50%"} color="#fff" />}
@@ -77,7 +76,7 @@ function NavContent({ currentSection, setCurrentSection }) {
             setButtonExpanded((el) => el == 'venda' ? null : 'venda')
           }}
           setButtonExpanded={setButtonExpanded}
-          name="venda"
+          name={<FormattedMessage id="navbar.order.text" />}
           Selected={[1,2].includes(currentSection)}
           icon={<MdShoppingCart color="#fff" size={"2rem"}/>} 
           iconNoselected={<MdShoppingCart size={"2rem"} opacity={"50%"} color="#fff" />}
@@ -114,7 +113,7 @@ function NavContent({ currentSection, setCurrentSection }) {
             setButtonExpanded((el) => el == 'financeiro' ? null : 'financeiro')
           }}
           setButtonExpanded={setButtonExpanded}
-          name="Financeiro"
+          name={<FormattedMessage id="navbar.finance.text" />}
           Selected={[3,4].includes(currentSection)}
           icon={<MdAttachMoney color="#fff" size={"2rem"}/>} 
           iconNoselected={<MdAttachMoney size={"2rem"} opacity={"50%"} color="#fff" />}
@@ -150,7 +149,7 @@ function NavContent({ currentSection, setCurrentSection }) {
               setButtonExpanded(null)
               setCurrentSection(5);
             }}
-            name="Clientes"
+            name={<FormattedMessage id="navbar.clients.text" />}
             Selected={currentSection === 5}
             icon={<MdPerson color="#fff" size={"2rem"} />}
             iconNoselected={<MdPerson size={"2rem"} opacity={"50%"} color="#fff" />}
@@ -164,7 +163,7 @@ function NavContent({ currentSection, setCurrentSection }) {
               setButtonExpanded(null)
               setCurrentSection(6);
             }}
-            name="Estoque"
+            name={<FormattedMessage id="navbar.stock.text" />}
             Selected={currentSection === 6}
             icon={<MdInventory color="#fff" size={"2rem"} />}
             iconNoselected={<MdInventory size={"2rem"} opacity={"50%"} color="#fff" />}
@@ -180,7 +179,7 @@ function NavContent({ currentSection, setCurrentSection }) {
               setButtonExpanded(null)
               setCurrentSection(7);
             }}
-            name="Configurações"
+            name={<FormattedMessage id="navbar.configuration.text" />}
             Selected={currentSection === 7}
             icon={<MdSettings color="#fff" size={"2rem"} />}
             iconNoselected={<MdSettings size={"2rem"} opacity={"50%"} color="#fff" />}

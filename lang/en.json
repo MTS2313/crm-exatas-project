@@ -1,0 +1,8 @@
+{
+    "navbar.dashboard.text": "Dashboard",
+    "navbar.order.text": "Orders",
+    "navbar.finance.text": "Finances",
+    "navbar.clients.text": "Clients",
+    "navbar.stock.text": "Stock",
+    "navbar.configuration.text": "Configurations"
+}
