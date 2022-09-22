@@ -5,6 +5,7 @@ import "./styles/Home.scss";
 import DashboardScreen from "../../components/CRM/CRMPages/Dashboard";
 import { useParams } from "react-router-dom";
 import Catalog from "../Sections/Catalog/Catalog";
+import Configuration from "../Sections/Configuration/Configuration";
 
 function Home() {
   const [componentActual, setComponentActual] = useState("");
@@ -17,6 +18,9 @@ function Home() {
         case 'vendas-relatorio':
           setCurrentSection(2)
           break;
+        case 'configurations':
+          setCurrentSection(7)
+          break;
       }
     }
   }, [section])
@@ -25,8 +29,11 @@ function Home() {
     if(currentSection){
       switch(currentSection){
         case 2:
-          setPathName('vendas-relatorio')
-        break;
+          return setPathName('vendas-relatorio')
+        case 7:
+          return setPathName('configurations')
+        default:
+           return setPathName('')
       }
             
     }
@@ -35,7 +42,7 @@ function Home() {
   function setPathName(section){
     const path = `/home/${section}`
     if(window?.location.pathname != path){
-      window.location.pathname = path
+      window.history.pushState('', 'CRM', path);
     }
   }
 
@@ -56,7 +63,7 @@ function Home() {
       case 6:
           return <h3>case 6</h3>        
       case 7:
-          return <h3>case 7</h3>        
+          return <Configuration />     
       case 8:
           return <h3>case 8</h3>        
       default:

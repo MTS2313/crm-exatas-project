@@ -6,14 +6,18 @@ import PageIndex from "./PageIndex";
 import RelatoriButton from "./RelatoriButton";
 
 
-function Header({ PageName, PageSubName }) {
+function Header({ 
+  PageName,  
+  PageSubName, 
+  hasReport, 
+  hasAddButton}) {
   return (
     <div className="Header">
       <PageIndex name={PageName} subname={PageSubName}/>
       <div className="BtnControl">
         <SearchBar placeholder="Pesquisar"/>
-        <RelatoriButton />
-        <Button name="Adicionar"/>
+        {hasReport && <RelatoriButton />}
+        {hasAddButton && <Button name="Adicionar"/>}
       </div>
     </div>
   );
