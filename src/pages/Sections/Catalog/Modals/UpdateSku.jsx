@@ -9,7 +9,6 @@ const UpdateSku = ({
     show, 
     handleClose}) => {
 
-        console.log('i am here', show)
   return (
       <Modal 
            isOpen={show}

@@ -26,7 +26,10 @@ function ButtonRenderControl({
     // when button is Drop
     <>
       <button
-        className={`ButtonRenderControl ${!isOpen && "ButtonBgControl"} ${isButtonExpanded && "isExpanded"}`}
+        className={`ButtonRenderControl 
+        ${!isOpen && "ButtonBgControl"} 
+        ${isButtonExpanded && "isExpanded"}
+        ${Selected ? "isSelected" : ""}`}
         onClick={onClick}
       >
         <span className="InfoBtnContent">
