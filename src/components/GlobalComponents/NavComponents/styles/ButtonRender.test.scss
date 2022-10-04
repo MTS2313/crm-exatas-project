@@ -18,17 +18,26 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+    letter-spacing: 1px;
     color: #fff;
   }
   svg{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
   }
   &:hover{
     background-color: rgba(104, 104, 104, 0.136);
   }
   &.isSelected {
     background: rgba(255, 255, 255, 0.2);
+  }
+  &.isSelected:not(.isExpanded) {
+    svg:nth-child(1){
+      outline: 1px solid #ffffff6b;
+      border-radius: 100%;
+    }
   }
   &.isExpanded{
     background: rgba(255, 255, 255, 0.1);

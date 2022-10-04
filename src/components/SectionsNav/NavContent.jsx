@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   MdDashboard,
-  MdExitToApp,
   MdPerson,
   MdAttachMoney,
   MdAccountBalanceWallet,
@@ -16,6 +15,7 @@ import "./styles/NavContent.scss";
 import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl";
 import SubButtonRenderControl from "../GlobalComponents/NavComponents/SubButtonRenderControl";
 import { FormattedMessage } from "react-intl";
+import logo from '../../assets/images/exataslogo.png'
 
 function NavContent({ currentSection, setCurrentSection }) {
   const [NavState, setNavState] = useState(true);
@@ -39,17 +39,25 @@ function NavContent({ currentSection, setCurrentSection }) {
   return (
     <>
       <div className={`NavContent ${NavScale}`} id="NavContent">
-        <div className="IconControl"></div>
-        <button
-          className={`ButtonContrlNav ${Btntr}`}
-          onClick={(i) => {
-            NavState ? NavWidthControl(true) : NavWidthControl(false);
-          }}
-        >
-          <div className="Stroke1" />
-          <div className="Stroke2" />
-          <div className="Stroke3" />
-        </button>
+        <div className="top-div">
+            <button
+              className={`ButtonContrlNav ${Btntr}`}
+              onClick={(i) => {
+                NavState ? NavWidthControl(true) : NavWidthControl(false);
+              }}
+              >
+              <div className="Stroke1" />
+              <div className="Stroke2" />
+              <div className="Stroke3" />
+            </button>
+            {NavState && (
+              <div className="logo-wrapper">
+                <img src={logo} />
+                <span className="logo-text">EXATAS</span>
+              </div>
+            )}
+
+          </div>
         <div className={DivBarControl} />
         <div className={`${
             NavState ? "SectionSelectTrue" : "SectionSelectFalse"

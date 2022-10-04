@@ -47,22 +47,51 @@
   .SectionSelectTrue {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 151px);
+    height: calc(100% - 260px);
     animation: 0.3s NavStateT forwards;
   }
   .SectionSelectFalse {
-    height: calc(100% - 110px);
+    height: calc(100% - 215px);
     display: flex;
     flex-direction: column;
     align-items: center;
     animation: 0.3s NavStateF forwards;
   }
+  .top-div{
+    padding-top: 30px;
+    height: 150px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    .logo-wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-right: 50px;
+      max-height: 70px;
+      img{
+        height: 70px;
+        width: 70px;
+      }
+      span.logo-text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 900;
+        font-size:30px;
+        line-height: 48px;
+        color: #FFFFFF;
+      }
+    }
+  }
+
 }
 .DivBarControlopen {
   width: 85.4%;
   height: 1px;
   background: #ffffff33;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
 }
 .DivBarControlClosed {
   display: none;
