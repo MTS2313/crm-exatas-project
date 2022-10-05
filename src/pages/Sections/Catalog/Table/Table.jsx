@@ -12,30 +12,33 @@ const TableLayout = ({ schema, data }) => {
 
     const [popup, setPopup] = useState(null)
     // showModal is relative to its modal, such as delete, view, update, or null
-    const [showModal, setShowModal] = useState(null)
+    const [showModal, setShowModal] = useState({currentModal: null, previousModal: null})
     const [indexItem, setIndexItem] = useState(null)
 
     useEffect(() => {
         if(showModal == null) setIndexItem(null)
     }, [showModal])
 
+    useEffect(() => {
+        console.log('testhg', showModal)
+    }, [showModal])
+
+
+    function handleSetShowModal(modal){
+        setShowModal((el) => {
+            let newShowModal = {
+                currentModal: modal, 
+                previousModal: el.currentModal
+            }
+            return newShowModal
+        })
+    }
 
     const displayModal = (modal, index) => {
         setPopup(null)
         setIndexItem(index)
-
-        switch(modal){
-            case 'delete':
-                setShowModal('delete')
-            break;
-            case 'view-product':
-                setShowModal('view-product')
-            break;
-            case 'update-product':
-                setShowModal('update-product')
-            break;
-        }
-
+        handleSetShowModal(modal)
+ 
     }
 
     const handleClose = () => setShowModal(null)
@@ -70,17 +73,18 @@ const TableLayout = ({ schema, data }) => {
     }
 
     return (
-        <ModalContext.Provider value={{showModal, setShowModal}}>
+        // MODAL PROVIDER
+        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal}}>
                 {/* -------------------- MODAL ViewProduct */}
                 <ModalViewProduct
-                    show={showModal == 'view-product'}
+                    show={showModal.currentModal == 'view-product'}
                     handleClose={handleClose}
                     />
                 {/* -------------------- MODAL UpdateProduct */}
-                <ModalUpdateProduct
+                {/* <ModalUpdateProduct
                     show={showModal == 'update-product'}
                     handleClose={handleClose}
-                    />
+                    /> */}
                 {/* -------------------- MODAL UpdateSKU */}
                 <ModalUpdateSku 
                     handleClose={handleClose}
