@@ -34,6 +34,16 @@ const TableLayout = ({ schema, data }) => {
         })
     }
 
+    function displayPreviousModal(){
+        setShowModal((el) => {
+            let newShowModal = {
+                currentModal: el.previousModal, 
+                previousModal: null
+            }
+            return newShowModal
+        })
+    }
+
     const displayModal = (modal, index) => {
         setPopup(null)
         setIndexItem(index)
@@ -41,7 +51,7 @@ const TableLayout = ({ schema, data }) => {
  
     }
 
-    const handleClose = () => setShowModal(null)
+    const handleClose = () => handleSetShowModal(null)
 
     const buildRow = (dataItem, index) => {
         return (
@@ -74,7 +84,7 @@ const TableLayout = ({ schema, data }) => {
 
     return (
         // MODAL PROVIDER
-        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal}}>
+        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal, displayPreviousModal}}>
                 {/* -------------------- MODAL ViewProduct */}
                 <ModalViewProduct
                     show={showModal.currentModal == 'view-product'}
@@ -88,7 +98,8 @@ const TableLayout = ({ schema, data }) => {
                 {/* -------------------- MODAL UpdateSKU */}
                 <ModalUpdateSku 
                     handleClose={handleClose}
-                    show={showModal == 'update-sku'}
+                    handlePreviousModal={displayPreviousModal}
+                    show={showModal.currentModal == 'update-sku'}
                     />
                 {/* <ModalDeleteProduct
                     show={showModal == 'delete-product'}
