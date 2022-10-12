@@ -13,31 +13,31 @@ const TableLayout = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
     // showModal is relative to its modal, such as delete, view, update, or null
     const [showModal, setShowModal] = useState({currentModal: null, previousModal: null})
-    const [indexItem, setIndexItem] = useState(null)
+    const [productIndex, setProductIndex] = useState(null)
 
     useEffect(() => {
-        if(showModal == null) setIndexItem(null)
+        if(showModal == null) setProductIndex(null)
     }, [showModal])
 
     useEffect(() => {
-        console.log('testhg', showModal)
-    }, [showModal])
+        console.log('testhg', productIndex)
+    }, [productIndex])
 
 
     function handleSetShowModal(modal){
-        setShowModal((el) => {
+        setShowModal((e) => {
             let newShowModal = {
-                currentModal: modal, 
-                previousModal: el.currentModal
+                currentModal: modal,
+                previousModal: e.currentModal
             }
             return newShowModal
         })
     }
 
     function displayPreviousModal(){
-        setShowModal((el) => {
+        setShowModal((e) => {
             let newShowModal = {
-                currentModal: el.previousModal, 
+                currentModal: e.previousModal, 
                 previousModal: null
             }
             return newShowModal
@@ -46,7 +46,7 @@ const TableLayout = ({ schema, data }) => {
 
     const displayModal = (modal, index) => {
         setPopup(null)
-        setIndexItem(index)
+        setProductIndex(index)
         handleSetShowModal(modal)
  
     }
@@ -88,6 +88,7 @@ const TableLayout = ({ schema, data }) => {
                 {/* -------------------- MODAL ViewProduct */}
                 <ModalViewProduct
                     show={showModal.currentModal == 'view-product'}
+                    product={data[productIndex]}
                     handleClose={handleClose}
                     />
                 {/* -------------------- MODAL UpdateProduct */}

@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@material/textfield": "^14.0.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.9",
+    "@mui/styled-engine-sc": "^5.10.6",
     "bootstrap": "^5.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -18,7 +21,7 @@
     "react-intl": "^6.1.1",
     "react-modal": "^3.15.1",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
