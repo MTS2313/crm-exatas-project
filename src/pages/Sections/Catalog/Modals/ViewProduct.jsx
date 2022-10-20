@@ -14,7 +14,13 @@ Modal.setAppElement('#crmbody');
 const ViewProduct = ({ handleClose, show, product }) => {
      const [skuAba, setSkuAba] = useState(0)
 
+     console.log('testhg product', product)
+
      const toggleSkuAba = (i) => setSkuAba(i)
+
+
+     if(!product) return null;
+     
      return (
           <Modal
                isOpen={show}
@@ -37,7 +43,7 @@ const ViewProduct = ({ handleClose, show, product }) => {
                               type="text"
                               label="ID"
                               disabled
-                              defaultValue="1"
+                              defaultValue={product.id}
                               className="input-s"
                          />
                               <div className='modalContentFields'>
@@ -47,7 +53,7 @@ const ViewProduct = ({ handleClose, show, product }) => {
                                                   Product name
                                              </p>
                                              <h3>
-                                                  Lorem ipsum dolor sit amet
+                                                  {product.name}
                                              </h3>
                                         </div>
                                         <div className='rw'>
@@ -55,14 +61,14 @@ const ViewProduct = ({ handleClose, show, product }) => {
                                                   type="text"
                                                   label="Marca"
                                                   disabled
-                                                  defaultValue="Ipsum"
+                                                  defaultValue={product.brand}
                                                   className="input-s"
                                              />
                                              <TextField
                                                   type="text"
                                                   label="Classificação"
                                                   disabled
-                                                  defaultValue="Lorwim"
+                                                  defaultValue={product.category}
                                                   className="input-s"
                                              />
                                         </div>
@@ -73,7 +79,7 @@ const ViewProduct = ({ handleClose, show, product }) => {
                                                   Description
                                              </p>
                                              <h3>
-                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum lectus, et maximus eros. Integer aliquam interdum sodales
+                                                  {product.description}
                                              </h3>
                                         </div>
                                    </div>

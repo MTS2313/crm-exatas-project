@@ -19,9 +19,6 @@ const TableLayout = ({ schema, data }) => {
         if(showModal == null) setProductIndex(null)
     }, [showModal])
 
-    useEffect(() => {
-        console.log('testhg', productIndex)
-    }, [productIndex])
 
 
     function handleSetShowModal(modal){
