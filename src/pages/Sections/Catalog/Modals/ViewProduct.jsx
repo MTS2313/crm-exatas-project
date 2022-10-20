@@ -2,8 +2,7 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 import '../../../../components/Modal/style/Modal.scss'
 import { close as CloseIcon } from '../../../../assets/svg/table.jsx'
-import ModalIDTextField from '../../../../components/Modal/ModalTextField/ModalIDTextField';
-import ModalTextField from '../../../../components/Modal/ModalTextField/ModalTextField';
+import TextField from '@mui/material/TextField';
 import FilledButton from '../../../../components/Portfolio/FilledButtonComponent';
 import './style/ViewProduct.scss'
 import TableSku from '../Table/TableSku';
@@ -12,11 +11,10 @@ import schema from "../../../../assets/data/tables/productSku.schema"
 
 Modal.setAppElement('#crmbody');
 
-const ViewProduct = ({ handleClose, show }) => {
+const ViewProduct = ({ handleClose, show, product }) => {
      const [skuAba, setSkuAba] = useState(0)
 
      const toggleSkuAba = (i) => setSkuAba(i)
-
      return (
           <Modal
                isOpen={show}
@@ -35,7 +33,13 @@ const ViewProduct = ({ handleClose, show }) => {
                     {/* --------------- CONTENT */}
                     <div className="modalBody">
                          <div className="modalContent">
-                              <ModalIDTextField placeholder={'1'} disabled inputName={'Id'} width={'150px'} />
+                         <TextField
+                              type="text"
+                              label="ID"
+                              disabled
+                              defaultValue="1"
+                              className="input-s"
+                         />
                               <div className='modalContentFields'>
                                    <div className='modalFieldsSelection'>
                                         <div className='viewProductFieldName'>
@@ -47,8 +51,20 @@ const ViewProduct = ({ handleClose, show }) => {
                                              </h3>
                                         </div>
                                         <div className='rw'>
-                                             <ModalTextField placeholder={'Ipsum'} inputName={'Marca'} disabled />
-                                             <ModalTextField placeholder={'Lorems'} inputName={'Classificação'} disabled />
+                                             <TextField
+                                                  type="text"
+                                                  label="Marca"
+                                                  disabled
+                                                  defaultValue="Ipsum"
+                                                  className="input-s"
+                                             />
+                                             <TextField
+                                                  type="text"
+                                                  label="Classificação"
+                                                  disabled
+                                                  defaultValue="Lorwim"
+                                                  className="input-s"
+                                             />
                                         </div>
                                    </div>
                                    <div className='modalFieldsSelection'>

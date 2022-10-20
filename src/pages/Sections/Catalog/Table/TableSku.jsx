@@ -8,7 +8,7 @@ import { ModalContext } from '../Context/ModalContext'
 const TableSku = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
     // showModal is relative to its modal, such as delete, view, update, or null
-    const {showModal, setShowModal} = useContext(ModalContext)
+    const {showModal, handleSetShowModal} = useContext(ModalContext)
     const [indexItem, setIndexItem] = useState(null)
 
     useEffect(() => {
@@ -18,26 +18,17 @@ const TableSku = ({ schema, data }) => {
 
     // ON DELETE
     const onDelete = (index) => {
-        setShowModal(null)
+        handleSetShowModal(null)
         alert('deleted')
     }
 
     const displayModal = (modal, index) => {
         setPopup(null)
         setIndexItem(index)
-
-        switch(modal){
-            case 'delete-sku':
-                setShowModal('delete-sku')
-            break;
-            case 'update-sku':
-                setShowModal('update-sku')
-            break;
-        }
-
+        handleSetShowModal(modal)
     }
 
-    const handleClose = () => setShowModal(null)
+    const handleClose = () => handleSetShowModal(null)
 
     const buildRow = (dataItem, index) => {
         return (

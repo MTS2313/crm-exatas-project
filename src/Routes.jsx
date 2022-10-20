@@ -42,6 +42,7 @@ export default function () {
     const langFromLocalStorage = window.localStorage.getItem("lang");
     if(langFromLocalStorage != language){
       window.localStorage.setItem("lang", language)
+      location.reload()
     }
   },[language])
   
