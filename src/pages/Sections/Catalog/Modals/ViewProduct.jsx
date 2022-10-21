@@ -14,7 +14,6 @@ Modal.setAppElement('#crmbody');
 const ViewProduct = ({ handleClose, show, product }) => {
      const [skuAba, setSkuAba] = useState(0)
 
-     console.log('testhg product', product)
 
      const toggleSkuAba = (i) => setSkuAba(i)
 
@@ -92,8 +91,8 @@ const ViewProduct = ({ handleClose, show, product }) => {
                                         <button onClick={() => { toggleSkuAba(0) }} className={`modalSkuActionButton ${skuAba == 0 && 'active'}`}>SKUs</button>
                                         <button onClick={() => { toggleSkuAba(1) }} className={`modalSkuActionButton ${skuAba == 1 && 'active'}`}>Outros</button>
                                    </div>
-                                   <div className='modalSkuBase'>
-                                        {skuAba === 0 && <TableSku schema={schema} data={testSkuDataList} />} 
+                                   <div className='modalSkuBase productSkuModal'>
+                                        {skuAba === 0 && <TableSku schema={schema} data={product['list_sku']} />} 
                                         {skuAba === 1 && <h1>Outros</h1>}
                                    </div>
                               </div>
