@@ -121,6 +121,10 @@
           border-radius: 8px;
           background-color: #F4F4F4;
           border: #2a7ffa solid 2px;
+          &.productSkuModal{
+               height: auto;
+               overflow: hidden;
+          }
      }
      .modalSkuActions {
           margin-left: 20px;

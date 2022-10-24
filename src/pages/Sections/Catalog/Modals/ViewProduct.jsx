@@ -2,8 +2,7 @@ import Modal from 'react-modal';
 import { useState } from 'react';
 import '../../../../components/Modal/style/Modal.scss'
 import { close as CloseIcon } from '../../../../assets/svg/table.jsx'
-import ModalIDTextField from '../../../../components/Modal/ModalTextField/ModalIDTextField';
-import ModalTextField from '../../../../components/Modal/ModalTextField/ModalTextField';
+import TextField from '@mui/material/TextField';
 import FilledButton from '../../../../components/Portfolio/FilledButtonComponent';
 import './style/ViewProduct.scss'
 import TableSku from '../Table/TableSku';
@@ -12,11 +11,15 @@ import schema from "../../../../assets/data/tables/productSku.schema"
 
 Modal.setAppElement('#crmbody');
 
-const ViewProduct = ({ handleClose, show }) => {
+const ViewProduct = ({ handleClose, show, product }) => {
      const [skuAba, setSkuAba] = useState(0)
+
 
      const toggleSkuAba = (i) => setSkuAba(i)
 
+
+     if(!product) return null;
+     
      return (
           <Modal
                isOpen={show}
@@ -35,7 +38,13 @@ const ViewProduct = ({ handleClose, show }) => {
                     {/* --------------- CONTENT */}
                     <div className="modalBody">
                          <div className="modalContent">
-                              <ModalIDTextField placeholder={'1'} disabled inputName={'Id'} width={'150px'} />
+                         <TextField
+                              type="text"
+                              label="ID"
+                              disabled
+                              defaultValue={product.id}
+                              className="input-s"
+                         />
                               <div className='modalContentFields'>
                                    <div className='modalFieldsSelection'>
                                         <div className='viewProductFieldName'>
@@ -43,12 +52,24 @@ const ViewProduct = ({ handleClose, show }) => {
                                                   Product name
                                              </p>
                                              <h3>
-                                                  Lorem ipsum dolor sit amet
+                                                  {product.name}
                                              </h3>
                                         </div>
                                         <div className='rw'>
-                                             <ModalTextField placeholder={'Ipsum'} inputName={'Marca'} disabled />
-                                             <ModalTextField placeholder={'Lorems'} inputName={'Classificação'} disabled />
+                                             <TextField
+                                                  type="text"
+                                                  label="Marca"
+                                                  disabled
+                                                  defaultValue={product.brand}
+                                                  className="input-s"
+                                             />
+                                             <TextField
+                                                  type="text"
+                                                  label="Classificação"
+                                                  disabled
+                                                  defaultValue={product.category}
+                                                  className="input-s"
+                                             />
                                         </div>
                                    </div>
                                    <div className='modalFieldsSelection'>
@@ -57,7 +78,7 @@ const ViewProduct = ({ handleClose, show }) => {
                                                   Description
                                              </p>
                                              <h3>
-                                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet interdum lectus, et maximus eros. Integer aliquam interdum sodales
+                                                  {product.description}
                                              </h3>
                                         </div>
                                    </div>
@@ -70,8 +91,8 @@ const ViewProduct = ({ handleClose, show }) => {
                                         <button onClick={() => { toggleSkuAba(0) }} className={`modalSkuActionButton ${skuAba == 0 && 'active'}`}>SKUs</button>
                                         <button onClick={() => { toggleSkuAba(1) }} className={`modalSkuActionButton ${skuAba == 1 && 'active'}`}>Outros</button>
                                    </div>
-                                   <div className='modalSkuBase'>
-                                        {skuAba === 0 && <TableSku schema={schema} data={testSkuDataList} />} 
+                                   <div className='modalSkuBase productSkuModal'>
+                                        {skuAba === 0 && <TableSku schema={schema} data={product['list_sku']} />} 
                                         {skuAba === 1 && <h1>Outros</h1>}
                                    </div>
                               </div>

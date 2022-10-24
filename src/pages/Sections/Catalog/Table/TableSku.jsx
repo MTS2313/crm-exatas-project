@@ -3,13 +3,17 @@ import ButtonPopup from './ButtonPopupSku'
 import ModalUpdateSku from '../Modals/UpdateSku'
 import { useContext, useEffect, useState } from 'react'
 import { ModalContext } from '../Context/ModalContext'
+import ImageModal from '../Modals/ImageModal'
+import {
+    MdCameraAlt
+} from "react-icons/md";
 
 
 const TableSku = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
-    // showModal is relative to its modal, such as delete, view, update, or null
-    const {showModal, setShowModal} = useContext(ModalContext)
     const [indexItem, setIndexItem] = useState(null)
+    const [imageModal, setImageModal] = useState(null)
+    const {showModal, handleSetShowModal} = useContext(ModalContext)
 
     useEffect(() => {
         if(showModal == null) setIndexItem(null)
@@ -18,41 +22,66 @@ const TableSku = ({ schema, data }) => {
 
     // ON DELETE
     const onDelete = (index) => {
-        setShowModal(null)
+        handleSetShowModal(null)
         alert('deleted')
     }
 
     const displayModal = (modal, index) => {
         setPopup(null)
         setIndexItem(index)
-
-        switch(modal){
-            case 'delete-sku':
-                setShowModal('delete-sku')
-            break;
-            case 'update-sku':
-                setShowModal('update-sku')
-            break;
-        }
-
+        handleSetShowModal(modal)
     }
 
-    const handleClose = () => setShowModal(null)
+    const handleClose = () => handleSetShowModal(null)
+    
+    const onProductImageClick = (image) => {setImageModal(image)}
+    
+    const closeImageModal = () => {setImageModal(null)}
+
+    
+    const getProductColor = (rgb) => `rgb(${rgb}, 0.3)`;
 
     const buildRow = (dataItem, index) => {
         return (
             <tr>
                 {schema.properties.map((schemaItem) => {
-                    return (
-                        <td 
+                    let {entityName} = schemaItem
+                    let item = dataItem[entityName]
+                    let color = dataItem['color']
+
+                    if(entityName == 'image'){
+                        return (
+                            <td 
                             colSpan={schemaItem.colgap}
-                            className={schemaItem.bold && 'bold'}
                             >
+                                <div className='product-image' 
+                                    style={{outlineColor: getProductColor(color.rgb)}}
+                                    onClick={() => onProductImageClick(item)}
+                                >
+                                    <div className='shadow active'>
+                                        <MdCameraAlt color="#ffffffa6" size={"2rem"} />
+                                    </div>
 
-                           {dataItem[schemaItem.entityName]}
+                                    <img 
+                                        src={dataItem[entityName]} 
+                                        />
+                                </div>
 
-                        </td>
-                    )
+                            </td>
+                        )
+                    }
+                    else{
+                            return (
+                                <td 
+                                colSpan={schemaItem.colgap}
+                                className={schemaItem.bold && 'bold'}
+                                >
+
+                                {item}
+
+                                </td>
+                            )
+                    }
                 })}
                 <td>
                     <ButtonPopup 
@@ -69,6 +98,9 @@ const TableSku = ({ schema, data }) => {
 
     return (
         <>
+        {imageModal && (
+            <ImageModal src={imageModal} closeImageModal={closeImageModal} />
+        )}
             <table className='tablelayout' cellSpacing="0"> 
                 <thead>
                     <tr>

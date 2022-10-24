@@ -7,7 +7,10 @@ const UpdateSku = ({
     index,
     item, 
     show, 
-    handleClose}) => {
+    handleClose,
+    handlePreviousModal}) => {
+
+
 
   return (
       <Modal 
@@ -25,6 +28,7 @@ const UpdateSku = ({
                     <CloseIcon />
                   </span>
               </div>
+              <button onClick={handlePreviousModal}>previous</button>
               {/* --------------- CONTENT */}
               <div className="content">
                 <span>

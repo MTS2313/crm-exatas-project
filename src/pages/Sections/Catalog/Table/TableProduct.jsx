@@ -12,33 +12,43 @@ const TableLayout = ({ schema, data }) => {
 
     const [popup, setPopup] = useState(null)
     // showModal is relative to its modal, such as delete, view, update, or null
-    const [showModal, setShowModal] = useState(null)
-    const [indexItem, setIndexItem] = useState(null)
+    const [showModal, setShowModal] = useState({currentModal: null, previousModal: null})
+    const [productIndex, setProductIndex] = useState(null)
 
     useEffect(() => {
-        if(showModal == null) setIndexItem(null)
+        if(showModal == null) setProductIndex(null)
     }, [showModal])
 
 
-    const displayModal = (modal, index) => {
-        setPopup(null)
-        setIndexItem(index)
 
-        switch(modal){
-            case 'delete':
-                setShowModal('delete')
-            break;
-            case 'view-product':
-                setShowModal('view-product')
-            break;
-            case 'update-product':
-                setShowModal('update-product')
-            break;
-        }
-
+    function handleSetShowModal(modal){
+        setShowModal((e) => {
+            let newShowModal = {
+                currentModal: modal,
+                previousModal: e.currentModal
+            }
+            return newShowModal
+        })
     }
 
-    const handleClose = () => setShowModal(null)
+    function displayPreviousModal(){
+        setShowModal((e) => {
+            let newShowModal = {
+                currentModal: e.previousModal, 
+                previousModal: null
+            }
+            return newShowModal
+        })
+    }
+
+    const displayModal = (modal, index) => {
+        setPopup(null)
+        setProductIndex(index)
+        handleSetShowModal(modal)
+ 
+    }
+
+    const handleClose = () => handleSetShowModal(null)
 
     const buildRow = (dataItem, index) => {
         return (
@@ -70,21 +80,24 @@ const TableLayout = ({ schema, data }) => {
     }
 
     return (
-        <ModalContext.Provider value={{showModal, setShowModal}}>
+        // MODAL PROVIDER
+        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal, displayPreviousModal}}>
                 {/* -------------------- MODAL ViewProduct */}
                 <ModalViewProduct
-                    show={showModal == 'view-product'}
+                    show={showModal.currentModal == 'view-product'}
+                    product={data[productIndex]}
                     handleClose={handleClose}
                     />
                 {/* -------------------- MODAL UpdateProduct */}
-                <ModalUpdateProduct
+                {/* <ModalUpdateProduct
                     show={showModal == 'update-product'}
                     handleClose={handleClose}
-                    />
+                    /> */}
                 {/* -------------------- MODAL UpdateSKU */}
                 <ModalUpdateSku 
                     handleClose={handleClose}
-                    show={showModal == 'update-sku'}
+                    handlePreviousModal={displayPreviousModal}
+                    show={showModal.currentModal == 'update-sku'}
                     />
                 {/* <ModalDeleteProduct
                     show={showModal == 'delete-product'}

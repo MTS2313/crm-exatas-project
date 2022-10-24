@@ -39,6 +39,44 @@
             color: #1E1E1E;
             font-weight: 700;
             }
+            padding: 10px;
+
+            .product-image{
+                position: relative;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                outline: 2px solid;
+                transition: 0.5s;
+                &:hover{
+                    outline: none;
+                    .shadow{
+                        display: grid;
+                    }
+                }
+                .shadow{
+                    position: absolute;
+                    display: none;
+                    width: 100px;
+                    height: 100px;
+                    align-items:center;
+                    align-content: center;
+                    background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0.67) 0%, rgba(0,0,0,0.48) 25%, rgba(255,255,255,0.96) 100%);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    svg{
+                        margin: 0 auto;
+                    }
+                }
+                img{
+
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    box-sizing: border-box;
+                }
+            }
         }
     }
     td{

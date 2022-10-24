@@ -7,8 +7,8 @@ const schema = {
             bold: false
         },
         {
-            name: "Descrição",
-            entityName: "description",
+            name: "Name",
+            entityName: "name",
             colgap: 1,
             bold: true
         },

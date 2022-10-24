@@ -1,20 +1,26 @@
 const schema = {
      properties: [
           {
+               name: "",
+               entityName: "image",
+               colgap: 1,
+               bold: false
+          },
+          {
                name: "ID",
                entityName: "id",
                colgap: 1,
                bold: false
           },
           {
-               name: "Descrição",
-               entityName: "description",
+               name: "Name",
+               entityName: "name",
                colgap: 1,
                bold: true
           },
           {
-               name: "Data de Cadastro",
-               entityName: "date_of_register",
+               name: "Atualizado em",
+               entityName: "date_updated",
                colgap: 1,
                bold: false
           },
