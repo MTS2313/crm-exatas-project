@@ -3,6 +3,7 @@ import ButtonPopup from './ButtonPopup'
 import { useEffect, useState } from 'react'
 import ModalViewProduct from '../Modals/ViewProduct'
 import ModalUpdateProduct from '../Modals/UpdateProduct'
+import ImageModal from '../Modals/ImageModal'
 import ModalUpdateSku from '../Modals/UpdateSku'
 import { ModalContext } from '../Context/ModalContext'
 
@@ -14,6 +15,7 @@ const TableLayout = ({ schema, data }) => {
     // showModal is relative to its modal, such as delete, view, update, or null
     const [showModal, setShowModal] = useState({currentModal: null, previousModal: null})
     const [productIndex, setProductIndex] = useState(null)
+    const [imageModal, setImageModal] = useState(null)
 
     useEffect(() => {
         if(showModal == null) setProductIndex(null)
@@ -48,6 +50,8 @@ const TableLayout = ({ schema, data }) => {
  
     }
 
+    const closeImageModal = () => {setImageModal(null)}
+
     const handleClose = () => handleSetShowModal(null)
 
     const buildRow = (dataItem, index) => {
@@ -81,7 +85,7 @@ const TableLayout = ({ schema, data }) => {
 
     return (
         // MODAL PROVIDER
-        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal, displayPreviousModal}}>
+        <ModalContext.Provider value={{showModal, setShowModal, handleSetShowModal, displayPreviousModal, setImageModal}}>
                 {/* -------------------- MODAL ViewProduct */}
                 <ModalViewProduct
                     show={showModal.currentModal == 'view-product'}
@@ -99,6 +103,10 @@ const TableLayout = ({ schema, data }) => {
                     handlePreviousModal={displayPreviousModal}
                     show={showModal.currentModal == 'update-sku'}
                     />
+
+                {imageModal && (
+                    <ImageModal src={imageModal} closeImageModal={closeImageModal} />
+                )}
                 {/* <ModalDeleteProduct
                     show={showModal == 'delete-product'}
                     handleClose={handleClose}

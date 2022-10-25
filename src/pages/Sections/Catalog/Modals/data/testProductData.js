@@ -12,7 +12,7 @@ const testSkuDataList = [
           additional_sku_specs:[
              'memory'
           ],
-          quantity: 22,
+          total_quantity: 11,
           list_sku:[
                {
                     id: '1',
@@ -21,6 +21,7 @@ const testSkuDataList = [
                     // timestamp yyyy-mm-dd hh:mm:ss
                     date_created: '2022-10-13 21:37:00',
                     date_updated: '2022-10-13 21:37:00',
+                    quantity:5,
                     cost: '300,00',
                     value: '5162,00',
                     // specifications
@@ -28,7 +29,7 @@ const testSkuDataList = [
                          name:'black', 
                          rgb: '0, 0, 0'
                     },
-                    image: 'https://a-static.mlcdn.com.br/800x560/smartphone-samsung-galaxy-s21-fe-128gb-preto-5g-6gb-ram-tela-64-cam-tripla-selfie-32mp/magazineluiza/233990000/e61df17d4e04c633f36b090c51002c08.jpg',
+                    image: 'https://www.cellshop.com/10393343-thickbox_default/smartphone-samsung-galaxy-s22-5g-dual-sim-8256gb-black.jpg',
                     // height x length x width
                     dimensions: '15x7x1 cm',
                     weight: '500 g',
@@ -43,6 +44,7 @@ const testSkuDataList = [
                     // timestamp yyyy-mm-dd hh:mm:ss
                     date_created: '2022-10-13 21:37:00',
                     date_updated: '2022-10-13 21:37:00',
+                    quantity:6,
                     cost: '300,00',
                     value: '5162,00',
                     // specifications
