@@ -54,7 +54,7 @@ const TableSku = ({ schema, data }) => {
                                 <div className="image-color-wrapper">
 
                                     <div className='product-image' onClick={() => onProductImageClick(item)}>
-                                        <div className='shadow active'>
+                                        <div className='shadow'>
                                             <MdCameraAlt color="#ffffffa6" size={"2rem"} />
                                         </div>
 
