@@ -49,8 +49,8 @@ const testSkuDataList = [
                     value: '5162,00',
                     // specifications
                     color: { 
-                         name:'green', 
-                         rgb: '59, 128, 66'
+                         name:'navy green', 
+                         rgb: '63, 135, 106'
                     },
                     image: 'https://samsungbr.vtexassets.com/arquivos/ids/331036-800-auto?width=800&height=auto&aspect=true',
                     // height x length x width
