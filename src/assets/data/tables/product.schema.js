@@ -13,23 +13,23 @@ const schema = {
             bold: true
         },
         {
-            name: "Data de Cadastro",
-            entityName: "date_of_register",
+            name: "Brand",
+            entityName: "brand",
             colgap: 1,
             bold: false
         },
         {
-            name: "Custo",
-            entityName: "cost",
-            colgap: 1,
-            bold: false
-        },        
-        {
-            name: "Valor",
-            entityName: "value",
+            name: "Status",
+            entityName: "status",
             colgap: 1,
             bold: true
-        },
+        },        
+        {
+            name: "Updated",
+            entityName: "date_updated",
+            colgap: 1,
+            bold: false
+        }
     ]
 }
 export default schema

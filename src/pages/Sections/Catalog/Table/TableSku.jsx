@@ -3,7 +3,7 @@ import ButtonPopup from './ButtonPopupSku'
 import ModalUpdateSku from '../Modals/UpdateSku'
 import { useContext, useEffect, useState } from 'react'
 import { ModalContext } from '../Context/ModalContext'
-import ImageModal from '../Modals/ImageModal'
+
 import {
     MdCameraAlt
 } from "react-icons/md";
@@ -12,8 +12,8 @@ import {
 const TableSku = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
     const [indexItem, setIndexItem] = useState(null)
-    const [imageModal, setImageModal] = useState(null)
-    const {showModal, handleSetShowModal} = useContext(ModalContext)
+    
+    const {showModal, handleSetShowModal, setImageModal} = useContext(ModalContext)
 
     useEffect(() => {
         if(showModal == null) setIndexItem(null)
@@ -32,14 +32,13 @@ const TableSku = ({ schema, data }) => {
         handleSetShowModal(modal)
     }
 
-    const handleClose = () => handleSetShowModal(null)
     
     const onProductImageClick = (image) => {setImageModal(image)}
     
-    const closeImageModal = () => {setImageModal(null)}
+    
 
     
-    const getProductColor = (rgb) => `rgb(${rgb}, 0.3)`;
+    const getProductColor = (rgb) => `rgb(${rgb}, 0.9)`;
 
     const buildRow = (dataItem, index) => {
         return (
@@ -51,22 +50,24 @@ const TableSku = ({ schema, data }) => {
 
                     if(entityName == 'image'){
                         return (
-                            <td 
-                            colSpan={schemaItem.colgap}
-                            >
-                                <div className='product-image' 
-                                    style={{outlineColor: getProductColor(color.rgb)}}
-                                    onClick={() => onProductImageClick(item)}
-                                >
-                                    <div className='shadow active'>
-                                        <MdCameraAlt color="#ffffffa6" size={"2rem"} />
+                            <td colSpan={schemaItem.colgap} >
+                                <div className="image-color-wrapper">
+
+                                    <div className='product-image' onClick={() => onProductImageClick(item)}>
+                                        <div className='shadow'>
+                                            <MdCameraAlt color="#ffffffa6" size={"2rem"} />
+                                        </div>
+
+                                        <img 
+                                            src={dataItem[entityName]} 
+                                            />
+
                                     </div>
-
-                                    <img 
-                                        src={dataItem[entityName]} 
-                                        />
+                                        <div className='product-color'>
+                                            <div className='color' style={{backgroundColor:getProductColor(color.rgb)}} />
+                                            <span>{color.name}</span>
+                                        </div>
                                 </div>
-
                             </td>
                         )
                     }
@@ -98,9 +99,7 @@ const TableSku = ({ schema, data }) => {
 
     return (
         <>
-        {imageModal && (
-            <ImageModal src={imageModal} closeImageModal={closeImageModal} />
-        )}
+
             <table className='tablelayout' cellSpacing="0"> 
                 <thead>
                     <tr>

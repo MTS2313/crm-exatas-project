@@ -1,59 +1,64 @@
 .viewProductModal {
-     width: 100%;
-     max-width: 1024px;
-     max-height: 100%;
-     .modalContentFields {
-          width: 100%;
-          gap: 20px;
-          display: flex;
-          margin-top: 20px;
-          align-items: flex-start;
-          .modalFieldsSelection {
-               width: 50%;
-               gap: 20px;
-               display: flex;
-               flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  max-height: 100%;
 
-               .viewProductFieldName {
-                    margin-bottom: 40px;
-                    p {
-                         margin-bottom: 20px;
-                         color: rgba($color: #000000, $alpha: 0.7);
-                    }
-                    h3 {
-                         color: #1e1e1e;
-                         font-weight: bold;
-                    }
-               }
-               .viewProductFieldDesc {
-                    margin-bottom: 40px;
-                    p {
-                         margin-bottom: 20px;
-                         color: rgba($color: #000000, $alpha: 0.7);
-                    }
-                    h3 {
-                         color: #1e1e1e;
-                         font-weight: 400;
-                    }
-               }
-          }
-     }
+  .left-side,
+  .right-side {
+    width: 50%;
+  }
 
-     .input-s{
-          width:100%;
-          max-width:200px;
-     }
+  .row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .col {
+    flex: auto;
+  }
 
-     .viewProductFooter {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          .viewProductActions {
-               width: 100%;
-               display: flex;
-               align-items: flex-end;
-               justify-content: flex-end;
-          }
-     }
+  .input-s {
+    width: 100%;
+    max-width: 200px;
+  }
+  .input-f {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .input-textfield {
+    width: 100%;
+    max-width: 530px;
+    textarea {
+      height: 140px !important;
+    }
+  }
+
+  .input-s,
+  .input-f,
+  .input-textfield {
+    label {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+
+      color: rgba(30, 30, 30, 0.7);
+    }
+  }
+
+  .viewProductFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .viewProductActions {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
 }
