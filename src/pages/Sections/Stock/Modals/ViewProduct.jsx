@@ -7,7 +7,7 @@ import FilledButton from "../../../../components/Portfolio/FilledButtonComponent
 import "./style/ViewProduct.scss";
 import TableSku from "../Table/TableSku";
 import testSkuDataList from "./data/testSkuData";
-import schema from "../../../../assets/data/tables/productSku.schema";
+import schema from "../../../../assets/data/stock/productSku.schema";
 
 Modal.setAppElement("#crmbody");
 

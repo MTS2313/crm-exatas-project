@@ -1,22 +1,21 @@
 import './styles/Table.scss'
 import ButtonPopup from './ButtonPopupSku'
-import ModalUpdateSku from '../Modals/UpdateSku'
 import { useContext, useEffect, useState } from 'react'
-import { ModalContext } from '../Context/ModalContext'
 
 import {
     MdCameraAlt
 } from "react-icons/md";
+import { useStock } from '../Context/StockContext'
 
 
 const TableSku = ({ schema, data }) => {
     const [popup, setPopup] = useState(null)
-    const [indexItem, setIndexItem] = useState(null)
-    
-    const {showModal, handleSetShowModal, setImageModal} = useContext(ModalContext)
+
+    const {showModal, handleSetShowModal, setImageModal, setSkuIndex, skuIndex} = useStock()
+
 
     useEffect(() => {
-        if(showModal == null) setIndexItem(null)
+        if(showModal == null) setSkuIndex(null)
     }, [showModal])
 
 
@@ -28,7 +27,7 @@ const TableSku = ({ schema, data }) => {
 
     const displayModal = (modal, index) => {
         setPopup(null)
-        setIndexItem(index)
+        setSkuIndex(index)
         handleSetShowModal(modal)
     }
 

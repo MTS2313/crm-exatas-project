@@ -1,5 +1,5 @@
 import TableComponent from "./components/Table/Table";
-import productSchema from "./assets/data/tables/product.schema";
+import productSchema from "./assets/data/stock/product.schema";
 import './assets/styles/scss/App.scss';
 
 
