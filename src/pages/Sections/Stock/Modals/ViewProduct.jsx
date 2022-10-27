@@ -8,6 +8,7 @@ import "./style/ViewProduct.scss";
 import TableSku from "../Table/TableSku";
 import testSkuDataList from "./data/testSkuData";
 import schema from "../../../../assets/data/stock/productSku.schema";
+import {getTimeStampFormattedStock} from '../../../../components/utils/timestampFormat'
 
 Modal.setAppElement("#crmbody");
 
@@ -53,7 +54,7 @@ const ViewProduct = ({ handleClose, show, product }) => {
               {/* ---------------- LEFT SIDE */}
               <div className="left-side">
                 {/* --------------- ROW 2  */}
-                <div className="row">
+                <div className="row row-2">
                   <div className="col">
                     <TextField
                       type="text"
@@ -77,11 +78,12 @@ const ViewProduct = ({ handleClose, show, product }) => {
                 <div className="row">
                   <div className="col">
                     <TextField
-                      type="text"
-                      label="Quantity"
+                      label="updated at"
+                      variant="standard"
+                      defaultValue={getTimeStampFormattedStock(product.date_updated)}
                       disabled
-                      defaultValue={product.total_quantity}
-                      className="input-s"
+                      className="input-dateupdate"
+
                     />
                   </div>
 
@@ -125,14 +127,14 @@ const ViewProduct = ({ handleClose, show, product }) => {
                   }}
                   className={`modalSkuActionButton ${skuAba == 1 && "active"}`}
                 >
-                  Outros
+                  Specifications
                 </button>
               </div>
               <div className="modalSkuBase productSkuModal">
                 {skuAba === 0 && (
                   <TableSku schema={schema} data={product["list_sku"]} />
                 )}
-                {skuAba === 1 && <h1>Outros</h1>}
+                {skuAba === 1 && <h1>Specifications</h1>}
               </div>
             </div>
             <div className="viewProductActions">

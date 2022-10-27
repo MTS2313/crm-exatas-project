@@ -2,7 +2,7 @@ const testSkuDataList = [
      {
           id: '1',
           name:'S22 Galaxy Ultra',
-          description: 'Lorem ipsum dolor sit amet...',
+          description: 'Lorem ipsum dolor sit amet ipsum dolor sit ametipsum dolor sit amet ipsum dolor sit ametipsum dolor pega na minha e balanca sit amet...',
           status: 'active',
           brand: 'Samsung',
           category: 'Smartphone',

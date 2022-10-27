@@ -13,18 +13,28 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 15px;
+    &.row-2{
+      .col:nth-child(2){
+        float: right;
+      }
+    }
   }
   .col {
     flex: auto;
+    padding: 5px;
   }
 
   .input-s {
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
   }
   .input-f {
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
+  }
+
+  .input-dateupdate{
+    width: 100%;
   }
 
   .input-textfield {
@@ -37,7 +47,8 @@
 
   .input-s,
   .input-f,
-  .input-textfield {
+  .input-textfield,
+  .input-dateupdate {
     label {
       font-family: "Inter";
       font-style: normal;
