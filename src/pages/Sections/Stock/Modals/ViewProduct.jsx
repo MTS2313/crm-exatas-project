@@ -9,6 +9,7 @@ import TableSku from "../Table/TableSku";
 import testSkuDataList from "./data/testSkuData";
 import schema from "../../../../assets/data/stock/productSku.schema";
 import {getTimeStampFormattedStock} from '../../../../components/utils/timestampFormat'
+import Specifications from "./subContent/Specifications";
 
 Modal.setAppElement("#crmbody");
 
@@ -134,7 +135,7 @@ const ViewProduct = ({ handleClose, show, product }) => {
                 {skuAba === 0 && (
                   <TableSku schema={schema} data={product["list_sku"]} />
                 )}
-                {skuAba === 1 && <h1>Specifications</h1>}
+                {skuAba === 1 && (<Specifications additional={product["additional_sku_specs"]} />)}
               </div>
             </div>
             <div className="viewProductActions">

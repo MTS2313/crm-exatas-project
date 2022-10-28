@@ -7,7 +7,7 @@ import ImageModal from "../Modals/ImageModal";
 import ModalUpdateSku from "../Modals/UpdateSku";
 import { ModalContext } from "../Context/ModalContext";
 import { useStock } from "../Context/StockContext";
-import {MdLens} from "react-icons/md"
+import { MdLens } from "react-icons/md";
 
 const TableLayout = ({ schema, data }) => {
   const [popup, setPopup] = useState(null);
@@ -36,35 +36,35 @@ const TableLayout = ({ schema, data }) => {
     return (
       <tr>
         {schema.properties.map((schemaItem) => {
-
-          let { entityName,colgap,bold } = schemaItem;
+          let { entityName, colgap, bold } = schemaItem;
           let item = dataItem[entityName];
-          let status = dataItem["status"];
 
-          switch(entityName){
+          switch (entityName) {
             case "status":
-              let isActive = item == 'active'
-                return (
-                    <td
-                      colSpan={colgap}
-                      className={bold && "bold"}
-                    >
-                      {isActive && (
-                        <MdLens color="#8CB469" />
-                      )}
-                      {item}
-                    </td>
-                  );
+              let isActive = item == "active";
+              return (
+                <td colSpan={colgap} className={bold && "bold"}>
+                  {isActive && <MdLens color="#8CB469" />}
+                  {item}
+                </td>
+              );
+            case "name":
+              return (
+                <td colSpan={colgap} className={`${bold && "bold"} td-name`}>
+                  <span
+                    role="button"
+                    onClick={() => displayModal("view-product", index)}
+                  >
+                    {item}
+                  </span>
+                </td>
+              );
             default:
-                return (
-                    <td
-                      colSpan={colgap}
-                      className={bold && "bold"}
-                    >
-                      {item}
-                    </td>
-                  );
-
+              return (
+                <td colSpan={colgap} className={bold && "bold"}>
+                  {item}
+                </td>
+              );
           }
         })}
         <td>

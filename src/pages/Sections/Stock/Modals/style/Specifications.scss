@@ -1,0 +1,111 @@
+.specifications-container {
+  width: 100%;
+  padding-bottom: 50px;
+  hr {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+  }
+  .text-wrapper {
+    width: 100%;
+    padding: 40px 40px 20px 40px;
+    .text-description {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 15px;
+      text-align: center;
+
+      color: rgba(30, 30, 30, 0.7);
+    }
+  }
+  .content{
+
+  .items-wrapper {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    li {
+      list-style-type: none;
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .additional-item {
+        padding: 5px;
+        // border: 1px solid #00000042;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 100%;
+        text-transform: capitalize;
+      }
+      .delete-item {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .addmore-wrapper {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+    .input-addmore {
+      width: 0;
+      opacity: 0;
+      transition: 0.2s;
+      &.active {
+        width: 100%;
+        min-width: 250px;
+        opacity: 1;
+      }
+    }
+
+      button {
+        margin: 0 auto;
+        display: block;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        &.add {
+          display: none;
+          span {
+            display: block;
+          }
+        }
+        &.cancel {
+          display: none;
+          margin-right: 5px;
+          padding: 5px;
+          &:hover{
+            // outline: 1px solid #000000ac;
+            border-radius: 8px;
+            background: #e6e6e6;
+          }
+        }
+        &.confirm {
+          display: none;
+          margin-left: 5px;
+          padding: 5px;
+          &:hover{
+            outline: 1px solid #2a7ffa;
+            border-radius: 8px;
+            background: #2a81fa24;
+          }
+        }
+        &.active {
+          display: block;
+        }
+      }
+    
+  }
+  }
+  .confirm-delete-content{
+
+  }
+}

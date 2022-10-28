@@ -28,6 +28,11 @@
     tr:nth-child(even) {
       background: rgba(0, 0, 0, 0.05);
     }
+    tr{
+      &:hover{
+        background: #dedbe7;
+      }
+    }
     td {
       font-family: "Inter";
       font-style: normal;
@@ -35,11 +40,14 @@
       font-size: 15px;
       line-height: 18px;
       color: rgba(43, 43, 43, 0.7);
+      padding: 10px;
       &.bold {
         color: #1e1e1e;
         font-weight: 700;
       }
-      padding: 10px;
+      &.td-name{
+        span{cursor: pointer;}
+      }
       .image-color-wrapper {
         display: inline-flex;
         align-items: center;
