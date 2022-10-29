@@ -10,8 +10,7 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import CreateAccount from "./pages/signup/CreateAccount";
 import Login from "./pages/signin/Login";
 import App from "./App";
-import ViewProduct from "./pages/Sections/Catalog/Modals/ViewProduct";
-import Catalog from "./pages/Sections/Catalog/Catalog";
+
 import Home from "./pages/Home/Home";
 
 import {IntlProvider} from 'react-intl'
@@ -59,9 +58,7 @@ export default function () {
               <Route path="/home/:section" element={<Home />} />
 
             {/* URLs  PARA TESTE */}
-            <Route path="/viewProduct" element={<ViewProduct />} />
             <Route path="/testtable" element={<App />} />
-            <Route path="/cata" element={<Catalog/>}/>
           </Routes>
         </BrowserRouter>
       </LanguageContext.Provider>

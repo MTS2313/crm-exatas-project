@@ -19,8 +19,8 @@ const schema = {
                bold: true
           },
           {
-               name: "Atualizado em",
-               entityName: "date_updated",
+               name: "Quantidade",
+               entityName: "quantity",
                colgap: 1,
                bold: false
           },

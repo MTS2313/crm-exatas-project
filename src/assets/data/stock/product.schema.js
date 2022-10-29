@@ -19,16 +19,16 @@ const schema = {
             bold: false
         },
         {
-            name: "Status",
-            entityName: "status",
-            colgap: 1,
-            bold: true
-        },        
-        {
             name: "Updated",
             entityName: "date_updated",
             colgap: 1,
             bold: false
+        },
+        {
+            name: "Status",
+            entityName: "status",
+            colgap: 1,
+            bold: true
         }
     ]
 }
