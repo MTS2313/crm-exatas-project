@@ -11,7 +11,6 @@ const PortfolioNavBar = () => {
 
      const toggleMenu = () => {
           menu === 'nav-bar' ? setMenu((menu = 'nav-bar active')) : setMenu((menu = 'nav-bar'))
-          console.log(menu)
      }
 
      return (

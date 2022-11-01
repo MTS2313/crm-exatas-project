@@ -15,7 +15,7 @@ const Configuration = () => {
         asAddButton={false} />
             <div className='configOptions'>
                 <button onClick={() => { toggleSkuAba(0) }} className={`configOptionsButton ${skuAba == 0 && 'active'}`}>Geral</button>
-                <button onClick={() => { toggleSkuAba(1) }} className={`configOptionsButton ${skuAba == 1 && 'active'}`}>Financeiro</button>
+                <button onClick={() => { toggleSkuAba(1) }} className={`configOptionsButton ${skuAba == 1 && 'active'}`}>Themes</button>
             </div>
             <div className='container-configuration--content'>
                 {skuAba === 0 && <Tab0 />} 

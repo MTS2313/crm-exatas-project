@@ -14,8 +14,10 @@ import {
 import "./styles/NavContent.scss";
 import ButtonRenderControl from "../GlobalComponents/NavComponents/ButtonRenderControl";
 import SubButtonRenderControl from "../GlobalComponents/NavComponents/SubButtonRenderControl";
+import themes from "../../assets/data/navbar.theme";
 import { FormattedMessage } from "react-intl";
 import logo from '../../assets/images/exataslogo.png'
+import { useGlobal } from "../../context/GlobalContext";
 
 function NavContent({ currentSection, setCurrentSection }) {
   const [NavState, setNavState] = useState(true);
@@ -36,9 +38,11 @@ function NavContent({ currentSection, setCurrentSection }) {
     setNavState(!NavState);
   }
 
+  const {theme} = useGlobal()
+
   return (
     <>
-      <div className={`NavContent ${NavScale}`} id="NavContent">
+      <div className={`NavContent ${NavScale}`} id="NavContent" style={themes[theme]}>
         <div className="top-div">
             <button
               className={`ButtonContrlNav ${Btntr}`}

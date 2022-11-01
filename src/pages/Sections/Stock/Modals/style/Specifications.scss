@@ -1,6 +1,9 @@
 .specifications-container {
   width: 100%;
   padding-bottom: 50px;
+  display: grid;
+  align-content: center;
+  align-items: center;
   hr {
     width: 80%;
     margin: 0 auto;
@@ -106,6 +109,59 @@
   }
   }
   .confirm-delete-content{
+    text-align: center;
+    padding-top: 50px;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    .item-to-delete{
+      color: #6c6c6c;
+      font-style: italic;
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
+    .action-buttons{
+      margin-top: 20px;
+      button{
+        width: 100px;
+        height: 35px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 10px;
+        align-content: center;
+        align-items: center;
+        display: inline-flex;
+        text-align: center;
+        justify-content: center;
+
+        transition-duration: 0.2s;
+        span{
+          display: block;
+        }
+        &.cancel{
+          outline: 1px solid #0000004a;
+        }
+        &.delete{
+          color: #fff;
+          background-color: #f35d5d;
+        }
+        &:hover{
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+      
+    }
 
   }
 }

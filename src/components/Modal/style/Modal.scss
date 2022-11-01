@@ -123,6 +123,7 @@
           border: #2a7ffa solid 2px;
           &.productSkuModal{
                height: auto;
+               min-height: 250px;
                overflow: hidden;
           }
      }
